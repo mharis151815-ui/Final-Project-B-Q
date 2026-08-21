@@ -1,0 +1,106 @@
+// 1. Landing / Home Page
+
+
+
+
+// 2. Login & Signup
+
+
+
+
+// 3. Student Dashboard
+
+
+
+
+// 4. Learning / Courses
+
+
+
+
+// 5. Course Roadmap
+
+
+
+
+// 6. Notes Manager
+
+
+
+
+// 7. Todo / Task Manager
+
+
+
+
+// 8. Quiz System     (Haris)
+
+
+
+
+// 9. Pomodoro Timer   (Haris)
+
+
+
+
+// 10. Expense Tracker
+
+
+
+
+// 11. Study Progress   (Haris)
+
+
+
+
+// 12. AI / Smart Tools
+
+
+
+
+// 13. Search      (Haris)
+
+
+
+
+// 14. Favorites / Bookmarks     (Haris)
+
+
+
+
+// 15. Dark / Light Mode       (Haris)
+
+
+
+
+// 16. Notifications / Toasts     (Haris)
+
+
+
+
+// 17. Profile Page
+
+
+
+
+// 18. Setting     (Haris)
+
+
+
+
+// 19. LocalStorage - Project Ka Important Part
+
+
+
+
+// 20. JavaScript mein kya kya demonstrate hoga?
+
+
+
+
+// 21. Responsive Design
+
+
+
+
+// 22. Overall Pages
