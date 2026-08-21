@@ -2,1279 +2,1052 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>StudyHub | Student Productivity Platform</title>
+    <title>StudyHub - Student Productivity Platform</title>
 
     <link rel="stylesheet" href="./Css/style.css">
+
 </head>
 
 <body>
 
+
     <!-- =====================================================
          1. LANDING / HOME PAGE
-         MAIZ
-    ====================================================== -->
+         ===================================================== -->
 
     <header class="navbar">
 
+        <!-- Logo -->
         <div class="logo">
-            🎓 Study<span>Hub</span>
+            🎓 StudyHub
         </div>
 
-        <nav>
+
+        <!-- Navigation -->
+        <nav class="nav-links">
+
             <a href="#home">Home</a>
+
             <a href="#features">Features</a>
+
             <a href="#courses">Courses</a>
-            <a href="#tools">Tools</a>
+
             <a href="#about">About</a>
+
         </nav>
 
+
+        <!-- Navbar Buttons -->
         <div class="nav-buttons">
-            <button onclick="showSection('login')">Login</button>
-            <button class="primary-btn" onclick="showSection('signup')">
+
+            <button class="login-btn" id="loginButton">
+                Login
+            </button>
+
+            <button class="primary-btn" id="getStartedButton">
                 Get Started
             </button>
+
         </div>
 
     </header>
 
 
-    <main>
 
-        <!-- HERO -->
+    <!-- =====================================================
+         HERO SECTION
+         ===================================================== -->
 
-        <section id="home" class="hero">
+    <section class="hero" id="home">
 
-            <div class="hero-content">
+        <div class="hero-content">
 
-                <span class="badge">🚀 Learn • Focus • Grow</span>
+            <span class="hero-badge">
+                🚀 Student Productivity Platform
+            </span>
 
-                <h1>
-                    Study Smarter.<br>
-                    <span>Achieve More.</span>
-                </h1>
+
+            <h1>
+                Study Smarter.
+                <span>Achieve More.</span>
+            </h1>
+
+
+            <p>
+                StudyHub is your all-in-one student productivity
+                and learning platform. Learn, organize, practice
+                and track your progress in one place.
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <button
+                    class="primary-btn"
+                    id="heroGetStartedButton">
+
+                    Get Started 🚀
+
+                </button>
+
+
+                <button
+                    class="secondary-btn"
+                    id="exploreButton">
+
+                    Explore Features
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Hero Dashboard Preview -->
+
+        <div class="hero-dashboard">
+
+            <div class="dashboard-top">
+
+                <div>
+                    <small>Welcome back 👋</small>
+
+                    <h3>Student Dashboard</h3>
+                </div>
+
+                <span class="dashboard-icon">
+                    📊
+                </span>
+
+            </div>
+
+
+            <div class="progress-title">
+
+                <span>Study Progress</span>
+
+                <strong>75%</strong>
+
+            </div>
+
+
+            <div class="progress-bar">
+
+                <div class="progress-fill"></div>
+
+            </div>
+
+
+            <div class="mini-stats">
+
+                <div class="mini-stat">
+
+                    <strong>12</strong>
+
+                    <span>Tasks</span>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <strong>4</strong>
+
+                    <span>Courses</span>
+
+                </div>
+
+
+                <div class="mini-stat">
+
+                    <strong>8h</strong>
+
+                    <span>Study Time</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         FEATURES SECTION
+         ===================================================== -->
+
+    <section class="features-section" id="features">
+
+        <div class="section-heading">
+
+            <span>✨ FEATURES</span>
+
+            <h2>
+                Everything You Need
+                <span>To Study Better</span>
+            </h2>
+
+            <p>
+                StudyHub provides useful tools to help students
+                learn and stay organized.
+            </p>
+
+        </div>
+
+
+
+        <div class="features-grid">
+
+
+            <!-- Feature 1 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📚
+                </div>
+
+                <h3>Learn</h3>
 
                 <p>
-                    Your all-in-one student productivity and
-                    learning platform.
+                    Follow structured courses and learning
+                    roadmaps.
                 </p>
 
-                <div class="hero-buttons">
-
-                    <button class="primary-btn" onclick="showSection('signup')">
-                        Get Started
-                    </button>
-
-                    <button class="secondary-btn" onclick="scrollToFeatures()">
-                        Explore Features
-                    </button>
-
-                </div>
-
             </div>
 
-            <div class="hero-card">
 
-                <div class="mini-card">
-                    <span>📚</span>
-                    <div>
-                        <strong>Learning</strong>
-                        <small>Keep improving</small>
-                    </div>
+
+            <!-- Feature 2 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    📝
                 </div>
 
-                <div class="mini-card">
-                    <span>✅</span>
-                    <div>
-                        <strong>Tasks</strong>
-                        <small>Stay organized</small>
-                    </div>
-                </div>
-
-                <div class="mini-card">
-                    <span>⏱️</span>
-                    <div>
-                        <strong>Focus</strong>
-                        <small>Study efficiently</small>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- FEATURES -->
-
-        <section id="features" class="section">
-
-            <div class="section-heading">
-
-                <span class="badge">Everything you need</span>
-
-                <h2>
-                    One Platform.<br>
-                    <span>Many Possibilities.</span>
-                </h2>
+                <h3>Take Notes</h3>
 
                 <p>
-                    Manage your learning, tasks, notes and
-                    productivity from one place.
+                    Create and organize important study notes.
                 </p>
 
             </div>
 
-            <div class="feature-grid">
 
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3>Learn</h3>
-                    <p>Track courses and learning roadmaps.</p>
+
+            <!-- Feature 3 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    ✅
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📝</div>
-                    <h3>Take Notes</h3>
-                    <p>Create and manage your study notes.</p>
+                <h3>Manage Tasks</h3>
+
+                <p>
+                    Organize your daily tasks and assignments.
+                </p>
+
+            </div>
+
+
+
+            <!-- Feature 4 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🧠
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">✅</div>
-                    <h3>Manage Tasks</h3>
-                    <p>Organize your daily tasks and goals.</p>
+                <h3>Practice</h3>
+
+                <p>
+                    Improve your knowledge with quizzes and
+                    practice.
+                </p>
+
+            </div>
+
+
+
+            <!-- Feature 5 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    💰
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">🧠</div>
-                    <h3>Practice</h3>
-                    <p>Test your knowledge with quizzes.</p>
+                <h3>Track Expenses</h3>
+
+                <p>
+                    Keep track of your daily student expenses.
+                </p>
+
+            </div>
+
+
+
+            <!-- Feature 6 -->
+
+            <div class="feature-card">
+
+                <div class="feature-icon">
+                    🤖
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">⏱️</div>
-                    <h3>Focus</h3>
-                    <p>Use productivity tools to stay focused.</p>
+                <h3>Smart Tools</h3>
+
+                <p>
+                    Use helpful tools for your everyday study
+                    needs.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         HOW IT WORKS
+         ===================================================== -->
+
+    <section class="how-section">
+
+        <div class="section-heading">
+
+            <span>⚡ HOW IT WORKS</span>
+
+            <h2>
+                Start Learning In
+                <span>3 Simple Steps</span>
+            </h2>
+
+        </div>
+
+
+        <div class="steps-grid">
+
+
+            <!-- Step 1 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    01
                 </div>
 
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Track Progress</h3>
-                    <p>Monitor your learning journey.</p>
+                <h3>Create Account</h3>
+
+                <p>
+                    Create your personal StudyHub account
+                    and start your journey.
+                </p>
+
+            </div>
+
+
+
+            <!-- Step 2 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    02
+                </div>
+
+                <h3>Choose Course</h3>
+
+                <p>
+                    Select a course and start learning
+                    with a structured roadmap.
+                </p>
+
+            </div>
+
+
+
+            <!-- Step 3 -->
+
+            <div class="step-card">
+
+                <div class="step-number">
+                    03
+                </div>
+
+                <h3>Track Progress</h3>
+
+                <p>
+                    Manage your tasks and track your
+                    learning progress.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         COURSES PREVIEW
+         ===================================================== -->
+
+    <section class="courses-section" id="courses">
+
+        <div class="section-heading">
+
+            <span>📚 COURSES</span>
+
+            <h2>
+                Popular
+                <span>Courses</span>
+            </h2>
+
+            <p>
+                Start learning the skills you need for
+                modern web development.
+            </p>
+
+        </div>
+
+
+
+        <div class="courses-grid">
+
+
+            <!-- HTML -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    🌐
+                </div>
+
+                <h3>HTML</h3>
+
+                <p>
+                    Learn the structure of modern websites.
+                </p>
+
+                <div class="course-details">
+
+                    <span>
+                        📖 12 Lessons
+                    </span>
+
+                    <span>
+                        Beginner
+                    </span>
+
                 </div>
 
             </div>
 
-        </section>
 
 
-        <!-- =====================================================
-             2. LOGIN & SIGNUP
-             MAIZ
-        ====================================================== -->
+            <!-- CSS -->
 
-        <section id="login" class="auth-section hidden">
+            <div class="course-card">
 
-            <div class="auth-card">
+                <div class="course-icon">
+                    🎨
+                </div>
 
-                <h2>Welcome Back 👋</h2>
+                <h3>CSS</h3>
 
-                <p>Login to continue your learning journey.</p>
+                <p>
+                    Design beautiful and responsive websites.
+                </p>
 
-                <form id="loginForm">
+                <div class="course-details">
 
-                    <label>Email</label>
-                    <input
-                        type="email"
-                        id="loginEmail"
-                        placeholder="Enter your email"
-                        required
-                    >
+                    <span>
+                        📖 15 Lessons
+                    </span>
 
-                    <label>Password</label>
-                    <input
-                        type="password"
-                        id="loginPassword"
-                        placeholder="Enter your password"
-                        required
-                    >
+                    <span>
+                        Beginner
+                    </span>
 
-                    <label class="checkbox-label">
-                        <input type="checkbox" id="rememberMe">
-                        Remember me
+                </div>
+
+            </div>
+
+
+
+            <!-- JavaScript -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    ⚡
+                </div>
+
+                <h3>JavaScript</h3>
+
+                <p>
+                    Make websites interactive and dynamic.
+                </p>
+
+                <div class="course-details">
+
+                    <span>
+                        📖 20 Lessons
+                    </span>
+
+                    <span>
+                        Intermediate
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Git -->
+
+            <div class="course-card">
+
+                <div class="course-icon">
+                    🔧
+                </div>
+
+                <h3>Git & GitHub</h3>
+
+                <p>
+                    Learn version control and collaboration.
+                </p>
+
+                <div class="course-details">
+
+                    <span>
+                        📖 10 Lessons
+                    </span>
+
+                    <span>
+                        Beginner
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         ABOUT SECTION
+         ===================================================== -->
+
+    <section class="about-section" id="about">
+
+        <div class="about-content">
+
+            <span>
+                🎓 ABOUT STUDYHUB
+            </span>
+
+            <h2>
+                Your Complete
+                <span>Student Companion</span>
+            </h2>
+
+            <p>
+                StudyHub brings learning and productivity tools
+                together in one simple platform. Students can
+                learn courses, manage notes, organize tasks and
+                improve their learning journey.
+            </p>
+
+            <button
+                class="primary-btn"
+                id="aboutButton">
+
+                Start Learning
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+<!-- =====================================================
+     2. LOGIN & SIGNUP
+     ===================================================== -->
+
+<section class="auth-section" id="auth">
+
+    <div class="auth-container">
+
+
+        <!-- ================= SIGNUP FORM ================= -->
+
+        <div class="auth-box" id="signupBox">
+
+            <div class="auth-header">
+
+                <span class="auth-icon">
+                    🎓
+                </span>
+
+                <h2>Create Account</h2>
+
+                <p>
+                    Join StudyHub and start your learning journey.
+                </p>
+
+            </div>
+
+
+            <form id="signupForm">
+
+
+                <!-- Name -->
+
+                <div class="input-group">
+
+                    <label for="signupName">
+                        Full Name
                     </label>
 
-                    <button type="submit" class="primary-btn full-btn">
-                        Login
-                    </button>
-
-                </form>
-
-                <p class="auth-switch">
-                    Don't have an account?
-                    <button onclick="showSection('signup')">
-                        Sign Up
-                    </button>
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <section id="signup" class="auth-section hidden">
-
-            <div class="auth-card">
-
-                <h2>Create Account 🚀</h2>
-
-                <p>Start your StudyHub journey today.</p>
-
-                <form id="signupForm">
-
-                    <label>Name</label>
                     <input
                         type="text"
                         id="signupName"
-                        placeholder="Enter your name"
-                        required
+                        placeholder="Enter your full name"
                     >
 
-                    <label>Email</label>
+                    <small
+                        class="error-message"
+                        id="signupNameError">
+                    </small>
+
+                </div>
+
+
+
+                <!-- Email -->
+
+                <div class="input-group">
+
+                    <label for="signupEmail">
+                        Email Address
+                    </label>
+
                     <input
                         type="email"
                         id="signupEmail"
                         placeholder="Enter your email"
-                        required
                     >
 
-                    <label>Password</label>
+                    <small
+                        class="error-message"
+                        id="signupEmailError">
+                    </small>
+
+                </div>
+
+
+
+                <!-- Password -->
+
+                <div class="input-group">
+
+                    <label for="signupPassword">
+                        Password
+                    </label>
+
                     <input
                         type="password"
                         id="signupPassword"
-                        placeholder="Create password"
-                        required
+                        placeholder="Enter your password"
                     >
 
-                    <label>Confirm Password</label>
+                    <small
+                        class="error-message"
+                        id="signupPasswordError">
+                    </small>
+
+                </div>
+
+
+
+                <!-- Confirm Password -->
+
+                <div class="input-group">
+
+                    <label for="confirmPassword">
+                        Confirm Password
+                    </label>
+
                     <input
                         type="password"
                         id="confirmPassword"
-                        placeholder="Confirm password"
-                        required
+                        placeholder="Confirm your password"
                     >
 
-                    <button type="submit" class="primary-btn full-btn">
-                        Create Account
-                    </button>
-
-                </form>
-
-                <p class="auth-switch">
-                    Already have an account?
-                    <button onclick="showSection('login')">
-                        Login
-                    </button>
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             3. STUDENT DASHBOARD
-             MAIZ
-        ====================================================== -->
-
-        <section id="dashboard" class="dashboard-section hidden">
-
-            <div class="dashboard-header">
-
-                <div>
-                    <span class="badge">Student Dashboard</span>
-
-                    <h2>
-                        Good Morning,
-                        <span id="dashboardName">Student</span> 👋
-                    </h2>
-
-                    <p>
-                        Let's make today productive.
-                    </p>
-                </div>
-
-                <button class="secondary-btn" onclick="logout()">
-                    Logout
-                </button>
-
-            </div>
-
-
-            <div class="stats-grid">
-
-                <div class="stat-card">
-                    <span>📚</span>
-                    <div>
-                        <small>Total Courses</small>
-                        <h3 id="courseCount">4</h3>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <span>✅</span>
-                    <div>
-                        <small>Completed Tasks</small>
-                        <h3 id="taskCount">0</h3>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <span>🧠</span>
-                    <div>
-                        <small>Quiz Average</small>
-                        <h3 id="quizAverage">--</h3>
-                    </div>
-                </div>
-
-                <div class="stat-card">
-                    <span>⏱️</span>
-                    <div>
-                        <small>Study Time</small>
-                        <h3 id="studyTime">0h</h3>
-                    </div>
-                </div>
-
-            </div>
-
-
-            <div class="dashboard-grid">
-
-                <div class="dashboard-card">
-
-                    <div class="card-heading">
-                        <h3>Today's Tasks</h3>
-                        <button onclick="showSection('todo')">
-                            View All
-                        </button>
-                    </div>
-
-                    <div id="dashboardTasks">
-                        <p class="empty-text">
-                            No tasks yet.
-                        </p>
-                    </div>
+                    <small
+                        class="error-message"
+                        id="confirmPasswordError">
+                    </small>
 
                 </div>
 
 
-                <div class="dashboard-card">
 
-                    <div class="card-heading">
-                        <h3>Recent Notes</h3>
-                        <button onclick="showSection('notes')">
-                            View All
-                        </button>
-                    </div>
-
-                    <div id="dashboardNotes">
-                        <p class="empty-text">
-                            No notes yet.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             4. LEARNING / COURSES
-             MAIZ
-        ====================================================== -->
-
-        <section id="courses" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">Learning</span>
-
-                <h2>Explore Courses 📚</h2>
-
-                <p>
-                    Build your web development skills step by step.
-                </p>
-
-            </div>
-
-
-            <div class="course-grid" id="courseList">
-
-                <div class="course-card">
-
-                    <div class="course-icon">🌐</div>
-
-                    <h3>HTML</h3>
-
-                    <p>
-                        Learn the structure of modern websites.
-                    </p>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 100%;"></div>
-                    </div>
-
-                    <small>100% Complete</small>
-
-                    <button
-                        class="primary-btn"
-                        onclick="openRoadmap('HTML')"
-                    >
-                        Continue Learning
-                    </button>
-
-                </div>
-
-
-                <div class="course-card">
-
-                    <div class="course-icon">🎨</div>
-
-                    <h3>CSS</h3>
-
-                    <p>
-                        Create beautiful responsive interfaces.
-                    </p>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 80%;"></div>
-                    </div>
-
-                    <small>80% Complete</small>
-
-                    <button
-                        class="primary-btn"
-                        onclick="openRoadmap('CSS')"
-                    >
-                        Continue Learning
-                    </button>
-
-                </div>
-
-
-                <div class="course-card">
-
-                    <div class="course-icon">⚡</div>
-
-                    <h3>JavaScript</h3>
-
-                    <p>
-                        Make websites interactive and dynamic.
-                    </p>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 60%;"></div>
-                    </div>
-
-                    <small>60% Complete</small>
-
-                    <button
-                        class="primary-btn"
-                        onclick="openRoadmap('JavaScript')"
-                    >
-                        Continue Learning
-                    </button>
-
-                </div>
-
-
-                <div class="course-card">
-
-                    <div class="course-icon">🔀</div>
-
-                    <h3>Git & GitHub</h3>
-
-                    <p>
-                        Learn version control and collaboration.
-                    </p>
-
-                    <div class="progress-container">
-                        <div class="progress-bar" style="width: 40%;"></div>
-                    </div>
-
-                    <small>40% Complete</small>
-
-                    <button
-                        class="primary-btn"
-                        onclick="openRoadmap('Git & GitHub')"
-                    >
-                        Continue Learning
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             5. COURSE ROADMAP
-             MAIZ
-        ====================================================== -->
-
-        <section id="roadmap" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">Learning Roadmap</span>
-
-                <h2 id="roadmapTitle">
-                    JavaScript Roadmap
-                </h2>
-
-                <p>
-                    Complete each topic to improve your progress.
-                </p>
-
-            </div>
-
-
-            <div class="roadmap">
-
-                <div class="roadmap-item completed">
-                    <span>1</span>
-                    <div>
-                        <h3>Variables</h3>
-                        <p>Learn var, let and const.</p>
-                    </div>
-                    <input type="checkbox" checked>
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item completed">
-                    <span>2</span>
-                    <div>
-                        <h3>Data Types</h3>
-                        <p>Understand JavaScript data types.</p>
-                    </div>
-                    <input type="checkbox" checked>
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>3</span>
-                    <div>
-                        <h3>Functions</h3>
-                        <p>Create reusable blocks of code.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>4</span>
-                    <div>
-                        <h3>Arrays & Objects</h3>
-                        <p>Work with collections of data.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>5</span>
-                    <div>
-                        <h3>DOM</h3>
-                        <p>Manipulate webpage elements.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>6</span>
-                    <div>
-                        <h3>Events</h3>
-                        <p>Handle user interactions.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>7</span>
-                    <div>
-                        <h3>LocalStorage</h3>
-                        <p>Save data in the browser.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-                <div class="roadmap-line"></div>
-
-                <div class="roadmap-item">
-                    <span>8</span>
-                    <div>
-                        <h3>Projects</h3>
-                        <p>Build practical JavaScript projects.</p>
-                    </div>
-                    <input type="checkbox">
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             6. NOTES MANAGER
-             MAIZ
-        ====================================================== -->
-
-        <section id="notes" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">Notes Manager</span>
-
-                <h2>My Study Notes 📝</h2>
-
-                <p>
-                    Save important concepts and ideas.
-                </p>
-
-            </div>
-
-
-            <div class="form-card">
-
-                <form id="noteForm">
-
-                    <input
-                        type="hidden"
-                        id="editingNoteId"
-                    >
-
-                    <input
-                        type="text"
-                        id="noteTitle"
-                        placeholder="Note title"
-                        required
-                    >
-
-                    <select id="noteCategory">
-
-                        <option value="HTML">HTML</option>
-                        <option value="CSS">CSS</option>
-                        <option value="JavaScript">JavaScript</option>
-                        <option value="Git">Git & GitHub</option>
-                        <option value="Other">Other</option>
-
-                    </select>
-
-                    <textarea
-                        id="noteContent"
-                        placeholder="Write your note..."
-                        rows="6"
-                        required
-                    ></textarea>
-
-                    <button
-                        type="submit"
-                        class="primary-btn"
-                    >
-                        Save Note
-                    </button>
-
-                </form>
-
-            </div>
-
-
-            <div class="search-box">
-
-                <input
-                    type="text"
-                    id="noteSearch"
-                    placeholder="Search notes..."
-                >
-
-            </div>
-
-
-            <div
-                class="notes-grid"
-                id="notesList"
-            ></div>
-
-        </section>
-
-
-        <!-- =====================================================
-             7. TODO / TASK MANAGER
-             MAIZ
-        ====================================================== -->
-
-        <section id="todo" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">Productivity</span>
-
-                <h2>My Tasks ✅</h2>
-
-                <p>
-                    Organize your daily study tasks.
-                </p>
-
-            </div>
-
-
-            <div class="form-card">
-
-                <form id="taskForm">
-
-                    <input
-                        type="hidden"
-                        id="editingTaskId"
-                    >
-
-                    <input
-                        type="text"
-                        id="taskTitle"
-                        placeholder="Enter task..."
-                        required
-                    >
-
-                    <select id="taskPriority">
-
-                        <option value="low">Low Priority</option>
-                        <option value="medium">
-                            Medium Priority
-                        </option>
-                        <option value="high">
-                            High Priority
-                        </option>
-
-                    </select>
-
-                    <input
-                        type="date"
-                        id="taskDueDate"
-                    >
-
-                    <button
-                        type="submit"
-                        class="primary-btn"
-                    >
-                        Add Task
-                    </button>
-
-                </form>
-
-            </div>
-
-
-            <div class="task-filters">
+                <!-- Signup Button -->
 
                 <button
-                    class="filter-btn active"
-                    onclick="filterTasks('all')"
-                >
-                    All
+                    type="submit"
+                    class="auth-btn">
+
+                    Create Account
+
                 </button>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Already have an account?
 
                 <button
-                    class="filter-btn"
-                    onclick="filterTasks('pending')"
-                >
-                    Pending
+                    type="button"
+                    id="showLogin">
+
+                    Login
+
                 </button>
 
-                <button
-                    class="filter-btn"
-                    onclick="filterTasks('completed')"
-                >
-                    Completed
-                </button>
+            </p>
 
-            </div>
+        </div>
 
 
-            <div
-                class="task-list"
-                id="taskList"
-            ></div>
 
-        </section>
-
-
-        <!-- =====================================================
-             8. QUIZ SYSTEM
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="quiz" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>🧠</span>
-
-                <h2>Quiz System</h2>
-
-                <p>
-                    This section is assigned to Haris.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             9. POMODORO TIMER
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="pomodoro" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>⏱️</span>
-
-                <h2>Pomodoro Timer</h2>
-
-                <p>
-                    This section is assigned to Haris.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             10. EXPENSE TRACKER
-             MAIZ
-        ====================================================== -->
-
-        <section id="expenses" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">Money Management</span>
-
-                <h2>Expense Tracker 💰</h2>
-
-                <p>
-                    Keep track of your income and expenses.
-                </p>
-
-            </div>
-
-
-            <div class="expense-summary">
-
-                <div class="expense-card">
-                    <small>Total Balance</small>
-                    <h3 id="totalBalance">Rs. 0</h3>
-                </div>
-
-                <div class="expense-card">
-                    <small>Income</small>
-                    <h3 id="totalIncome">Rs. 0</h3>
-                </div>
-
-                <div class="expense-card">
-                    <small>Expenses</small>
-                    <h3 id="totalExpense">Rs. 0</h3>
-                </div>
-
-            </div>
-
-
-            <div class="form-card">
-
-                <form id="expenseForm">
-
-                    <input
-                        type="text"
-                        id="expenseTitle"
-                        placeholder="Transaction title"
-                        required
-                    >
-
-                    <input
-                        type="number"
-                        id="expenseAmount"
-                        placeholder="Amount"
-                        min="1"
-                        required
-                    >
-
-                    <select id="expenseType">
-
-                        <option value="income">
-                            Income
-                        </option>
-
-                        <option value="expense">
-                            Expense
-                        </option>
-
-                    </select>
-
-                    <select id="expenseCategory">
-
-                        <option value="Food">🍔 Food</option>
-                        <option value="Transport">🚌 Transport</option>
-                        <option value="Education">
-                            📚 Education
-                        </option>
-                        <option value="Shopping">
-                            🛍️ Shopping
-                        </option>
-                        <option value="Other">📦 Other</option>
-
-                    </select>
-
-                    <button
-                        type="submit"
-                        class="primary-btn"
-                    >
-                        Add Transaction
-                    </button>
-
-                </form>
-
-            </div>
-
-
-            <div
-                id="expenseList"
-                class="expense-list"
-            ></div>
-
-        </section>
-
-
-        <!-- =====================================================
-             11. STUDY PROGRESS
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="progress" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>📈</span>
-
-                <h2>Study Progress</h2>
-
-                <p>
-                    This section is assigned to Haris.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             12. AI / SMART TOOLS
-             MAIZ
-        ====================================================== -->
-
-        <section id="tools" class="section hidden">
-
-            <div class="section-heading">
-
-                <span class="badge">Smart Tools</span>
-
-                <h2>Useful Student Tools 🤖</h2>
-
-                <p>
-                    Simple utilities to make studying easier.
-                </p>
-
-            </div>
-
-
-            <div class="tools-grid">
-
-                <div class="tool-card">
-
-                    <span>📝</span>
-
-                    <h3>Word Counter</h3>
-
-                    <textarea
-                        id="wordCounterInput"
-                        placeholder="Type or paste your text..."
-                    ></textarea>
-
-                    <p>
-                        Words:
-                        <strong id="wordCount">0</strong>
-                    </p>
-
-                </div>
-
-
-                <div class="tool-card">
-
-                    <span>🧮</span>
-
-                    <h3>Calculator</h3>
-
-                    <input
-                        type="text"
-                        id="calculatorInput"
-                        placeholder="Example: 10 + 20"
-                    >
-
-                    <button
-                        class="primary-btn"
-                        onclick="calculateResult()"
-                    >
-                        Calculate
-                    </button>
-
-                    <h3 id="calculatorResult">
-                        Result: -
-                    </h3>
-
-                </div>
-
-
-                <div class="tool-card">
-
-                    <span>🔐</span>
-
-                    <h3>Password Generator</h3>
-
-                    <input
-                        type="text"
-                        id="generatedPassword"
-                        readonly
-                        placeholder="Your password"
-                    >
-
-                    <button
-                        class="primary-btn"
-                        onclick="generatePassword()"
-                    >
-                        Generate
-                    </button>
-
-                </div>
-
-
-                <div class="tool-card">
-
-                    <span>🎨</span>
-
-                    <h3>Color Picker</h3>
-
-                    <input
-                        type="color"
-                        id="colorPicker"
-                        value="#6c63ff"
-                    >
-
-                    <p>
-                        Color:
-                        <strong id="colorValue">
-                            #6c63ff
-                        </strong>
-                    </p>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             13. SEARCH
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="global-search" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>🔎</span>
-
-                <h2>Global Search</h2>
-
-                <p>
-                    This section is assigned to Haris.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             14. FAVORITES / BOOKMARKS
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="favorites" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>⭐</span>
-
-                <h2>Favorites / Bookmarks</h2>
-
-                <p>
-                    This section is assigned to Haris.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             15. DARK / LIGHT MODE
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <!-- Theme functionality will be added by Haris -->
-
-
-        <!-- =====================================================
-             16. NOTIFICATIONS / TOASTS
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
+        <!-- ================= LOGIN FORM ================= -->
 
         <div
-            id="toastContainer"
-            class="toast-container"
-        ></div>
+            class="auth-box hidden"
+            id="loginBox">
 
+            <div class="auth-header">
 
-        <!-- =====================================================
-             17. PROFILE PAGE
-             MAIZ
-        ====================================================== -->
+                <span class="auth-icon">
+                    👋
+                </span>
 
-        <section id="profile" class="section hidden">
-
-            <div class="section-heading left">
-
-                <span class="badge">My Profile</span>
-
-                <h2>Profile 👤</h2>
-
-            </div>
-
-
-            <div class="profile-card">
-
-                <div class="profile-avatar">
-                    👤
-                </div>
-
-                <h2 id="profileName">
-                    Student
-                </h2>
+                <h2>Welcome Back</h2>
 
                 <p>
-                    Web Development Student
-                </p>
-
-                <div class="profile-stats">
-
-                    <div>
-                        <strong id="profileCourses">4</strong>
-                        <span>Courses</span>
-                    </div>
-
-                    <div>
-                        <strong id="profileTasks">0</strong>
-                        <span>Tasks</span>
-                    </div>
-
-                    <div>
-                        <strong id="profileNotes">0</strong>
-                        <span>Notes</span>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             18. SETTINGS
-             HARIS
-             DO NOT EDIT
-        ====================================================== -->
-
-        <section id="settings" class="section hidden">
-
-            <div class="assigned-feature">
-
-                <span>⚙️</span>
-
-                <h2>Settings</h2>
-
-                <p>
-                    This section is assigned to Haris.
+                    Login to continue your learning journey.
                 </p>
 
             </div>
 
-        </section>
 
-    </main>
+            <form id="loginForm">
+
+
+                <!-- Login Email -->
+
+                <div class="input-group">
+
+                    <label for="loginEmail">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Enter your email"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="loginEmailError">
+                    </small>
+
+                </div>
+
+
+
+                <!-- Login Password -->
+
+                <div class="input-group">
+
+                    <label for="loginPassword">
+                        Password
+                    </label>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Enter your password"
+                    >
+
+                    <small
+                        class="error-message"
+                        id="loginPasswordError">
+                    </small>
+
+                </div>
+
+
+
+                <!-- Remember Me -->
+
+                <div class="remember-row">
+
+                    <label class="checkbox-label">
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe">
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+                </div>
+
+
+
+                <!-- Login Button -->
+
+                <button
+                    type="submit"
+                    class="auth-btn">
+
+                    Login
+
+                </button>
+
+            </form>
+
+
+            <p class="auth-switch">
+
+                Don't have an account?
+
+                <button
+                    type="button"
+                    id="showSignup">
+
+                    Create Account
+
+                </button>
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+    <!-- =====================================================
+         3. STUDENT DASHBOARD
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         4. LEARNING / COURSES
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         5. COURSE ROADMAP
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         6. NOTES MANAGER
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         7. TODO / TASK MANAGER
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         8. QUIZ SYSTEM - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         9. POMODORO TIMER - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         10. EXPENSE TRACKER
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         11. STUDY PROGRESS - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         12. AI / SMART TOOLS
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         13. SEARCH - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         14. FAVORITES / BOOKMARKS - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         15. DARK / LIGHT MODE - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         16. NOTIFICATIONS / TOASTS - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         17. PROFILE PAGE
+         ===================================================== -->
+
+    <!-- Is section ka complete code next step mein add hoga -->
+
+
+
+    <!-- =====================================================
+         18. SETTINGS - HARIS
+         ===================================================== -->
+
+    <!-- HARIS WILL ADD CODE HERE -->
+
+
+
+    <!-- =====================================================
+         19. LOCALSTORAGE
+         ===================================================== -->
+
+    <!-- LocalStorage ka JavaScript different sections
+         ke andar use hoga -->
+
+
+
+    <!-- =====================================================
+         20. JAVASCRIPT CONCEPTS
+         ===================================================== -->
+
+    <!-- JavaScript concepts different features mein
+         demonstrate honge -->
+
+
+
+    <!-- =====================================================
+         21. RESPONSIVE DESIGN
+         ===================================================== -->
+
+    <!-- Responsive CSS style.css mein hoga -->
+
 
 
     <!-- =====================================================
          FOOTER
-         MAIZ
-    ====================================================== -->
+         ===================================================== -->
 
-    <footer>
+    <footer class="footer">
 
-        <div class="logo">
-            🎓 Study<span>Hub</span>
+        <div class="footer-logo">
+            🎓 StudyHub
         </div>
 
         <p>
-            Learn smarter. Stay productive. Achieve more.
+            Learn smarter. Work better. Achieve more.
         </p>
 
-        <p>
-            © 2026 StudyHub. Final Project.
+        <p class="copyright">
+            © 2026 StudyHub. All Rights Reserved.
         </p>
 
     </footer>
+
 
 
     <script src="./js/script.js"></script>
