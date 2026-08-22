@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Course Roadmap | StudyHub</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+        href="./Css/dashboard.css">
+
+    <!-- Course Details CSS -->
+    <link rel="stylesheet"
+        href="./Css/course-details.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            🎓 StudyHub
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html"
+                class="nav-link">
+
+                📊
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="courses.html"
+                class="nav-link active">
+
+                📚
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="notes.html"
+                class="nav-link">
+
+                📝
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="tasks.html"
+                class="nav-link">
+
+                ✅
+                <span>Tasks</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                TOOLS
+            </div>
+
+
+            <!-- Haris -->
+
+            <a href="quiz.html"
+                class="nav-link">
+
+                🧠
+                <span>Quiz</span>
+
+            </a>
+
+
+            <!-- Haris -->
+
+            <a href="pomodoro.html"
+                class="nav-link">
+
+                ⏱️
+                <span>Pomodoro</span>
+
+            </a>
+
+
+            <a href="expenses.html"
+                class="nav-link">
+
+                💰
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a href="tools.html"
+                class="nav-link">
+
+                🤖
+                <span>AI Tools</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                ACCOUNT
+            </div>
+
+
+            <a href="profile.html"
+                class="nav-link">
+
+                👤
+                <span>Profile</span>
+
+            </a>
+
+
+            <!-- Haris -->
+
+            <a href="settings.html"
+                class="nav-link">
+
+                ⚙️
+                <span>Settings</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="course-details-main">
+
+
+        <!-- Back Button -->
+
+        <a href="courses.html"
+            class="back-courses">
+
+            ← Back to Courses
+
+        </a>
+
+
+
+        <!-- =================================================
+             COURSE HEADER
+             ================================================= -->
+
+        <section class="course-details-header">
+
+
+            <div class="course-large-icon"
+                id="courseIcon">
+
+                📚
+
+            </div>
+
+
+            <div class="course-header-info">
+
+                <span
+                    class="course-category"
+                    id="courseCategory">
+
+                    COURSE
+
+                </span>
+
+
+                <h1 id="courseTitle">
+
+                    Course Roadmap
+
+                </h1>
+
+
+                <p id="courseDescription">
+
+                    Start learning and improve
+                    your skills step by step.
+
+                </p>
+
+
+                <div class="course-meta">
+
+                    <span id="lessonCount">
+                        📚 Lessons
+                    </span>
+
+                    <span id="courseDuration">
+                        ⏱️ Duration
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COURSE PROGRESS
+             ================================================= -->
+
+        <section class="roadmap-progress-card">
+
+
+            <div class="progress-heading">
+
+                <div>
+
+                    <h2>
+                        Your Progress
+                    </h2>
+
+                    <p>
+                        Complete lessons to track
+                        your learning progress.
+                    </p>
+
+                </div>
+
+
+                <strong id="progressPercentage">
+                    0%
+                </strong>
+
+            </div>
+
+
+            <div class="roadmap-progress-bar">
+
+                <div
+                    id="roadmapProgressFill"
+                    class="roadmap-progress-fill">
+
+                </div>
+
+            </div>
+
+
+            <p class="completed-text">
+
+                <span id="completedLessons">
+                    0
+                </span>
+
+                of
+
+                <span id="totalLessons">
+                    0
+                </span>
+
+                lessons completed
+
+            </p>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ROADMAP
+             ================================================= -->
+
+        <section class="roadmap-section">
+
+
+            <div class="section-heading">
+
+                <span class="section-badge">
+                    🗺️ ROADMAP
+                </span>
+
+
+                <h2>
+                    Learning Roadmap
+                </h2>
+
+
+                <p>
+                    Follow these lessons step by step
+                    to complete the course.
+                </p>
+
+            </div>
+
+
+
+            <!-- Lessons will come from JavaScript -->
+
+            <div
+                id="roadmapContainer"
+                class="roadmap-container">
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- JavaScript -->
+
+    <script src="./js/course-details.js"></script>
+
+</body>
+
+</html>

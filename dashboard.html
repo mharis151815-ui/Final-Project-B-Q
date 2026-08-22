@@ -1,184 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Css/dashboard.css">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | StudyHub</title>
+
+    <link rel="stylesheet"
+        href="Css/dashboard.css">
+
 </head>
+
+
 <body>
-        <!-- =====================================================
-     3. STUDENT DASHBOARD
-     ===================================================== -->
 
-    <section class="dashboard-section" id="dashboard">
 
-        <div class="dashboard-container">
+    <!-- =====================================================
+         DASHBOARD WRAPPER
+         ===================================================== -->
 
-            <!-- Dashboard Header -->
-            <div class="dashboard-header">
+    <div class="dashboard-wrapper">
 
-                <div>
-                    <span class="dashboard-label">
-                        📊 STUDENT DASHBOARD
-                    </span>
 
-                    <h2>
-                        Good Morning,
-                        <span id="dashboardUserName">Student</span> 👋
-                    </h2>
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <a href="index.html">
+
+                    🎓
+                    <span>StudyHub</span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    MAIN MENU
+                </p>
+
+
+                <a href="dashboard.html"
+                    class="nav-link active">
+
+                    <span>📊</span>
+                    Dashboard
+
+                </a>
+
+
+                <a href="courses.html"
+                    class="nav-link">
+
+                    <span>📚</span>
+                    Courses
+
+                </a>
+
+
+                <a href="notes.html"
+                    class="nav-link">
+
+                    <span>📝</span>
+                    Notes
+
+                </a>
+
+
+                <a href="tasks.html"
+                    class="nav-link">
+
+                    <span>✅</span>
+                    Tasks
+
+                </a>
+
+
+                <p class="nav-title">
+                    TOOLS
+                </p>
+
+
+                <a href="quiz.html"
+                    class="nav-link">
+
+                    <span>🧠</span>
+                    Quiz
+
+                </a>
+
+
+                <a href="pomodoro.html"
+                    class="nav-link">
+
+                    <span>⏱️</span>
+                    Pomodoro
+
+                </a>
+
+
+                <a href="expenses.html"
+                    class="nav-link">
+
+                    <span>💰</span>
+                    Expenses
+
+                </a>
+
+
+                <a href="tools.html"
+                    class="nav-link">
+
+                    <span>🤖</span>
+                    AI Tools
+
+                </a>
+
+
+                <p class="nav-title">
+                    ACCOUNT
+                </p>
+
+
+                <a href="profile.html"
+                    class="nav-link">
+
+                    <span>👤</span>
+                    Profile
+
+                </a>
+
+
+                <a href="settings.html"
+                    class="nav-link">
+
+                    <span>⚙️</span>
+                    Settings
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+
+                <button
+                    id="logoutBtn"
+                    class="logout-btn">
+
+                    <span>🚪</span>
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =============================================
+                 TOP BAR
+                 ============================================= -->
+
+            <header class="topbar">
+
+
+                <div class="mobile-menu">
+
+                    <button id="menuBtn">
+                        ☰
+                    </button>
+
+                </div>
+
+
+                <div class="topbar-title">
+
+                    <h1>
+                        Dashboard
+                    </h1>
 
                     <p>
-                        Keep learning and achieve your goals today.
+                        Manage your learning journey.
                     </p>
-                </div>
-
-                <div class="dashboard-date">
-                    <span>📅</span>
-                    <span id="dashboardDate"></span>
-                </div>
-
-            </div>
-
-
-            <!-- Dashboard Stats -->
-
-            <div class="dashboard-stats">
-
-                <!-- Courses -->
-                <div class="stat-card">
-
-                    <div class="stat-icon courses-icon">
-                        📚
-                    </div>
-
-                    <div class="stat-content">
-
-                        <span>Total Courses</span>
-
-                        <h3 id="totalCourses">
-                            4
-                        </h3>
-
-                        <small>
-                            Active courses
-                        </small>
-
-                    </div>
 
                 </div>
 
 
-                <!-- Tasks -->
-                <div class="stat-card">
-
-                    <div class="stat-icon tasks-icon">
-                        ✅
-                    </div>
-
-                    <div class="stat-content">
-
-                        <span>Tasks Completed</span>
-
-                        <h3 id="completedTasks">
-                            7/10
-                        </h3>
-
-                        <small>
-                            Today's tasks
-                        </small>
-
-                    </div>
-
-                </div>
+                <div class="topbar-right">
 
 
-                <!-- Quiz -->
-                <div class="stat-card">
+                    <div class="date-box">
 
-                    <div class="stat-icon quiz-icon">
-                        🧠
-                    </div>
+                        📅
 
-                    <div class="stat-content">
-
-                        <span>Quiz Average</span>
-
-                        <h3 id="quizAverage">
-                            82%
-                        </h3>
-
-                        <small>
-                            Average score
-                        </small>
-
-                    </div>
-
-                </div>
-
-
-                <!-- Study Time -->
-                <div class="stat-card">
-
-                    <div class="stat-icon time-icon">
-                        ⏱️
-                    </div>
-
-                    <div class="stat-content">
-
-                        <span>Study Time</span>
-
-                        <h3 id="studyTime">
-                            12h
-                        </h3>
-
-                        <small>
-                            This week
-                        </small>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <!-- Main Dashboard Grid -->
-
-            <div class="dashboard-grid">
-
-
-                <!-- Study Progress -->
-
-                <div class="dashboard-card progress-card">
-
-                    <div class="card-header">
-
-                        <div>
-                            <span class="card-small-title">
-                                📈 PROGRESS
-                            </span>
-
-                            <h3>
-                                Study Progress
-                            </h3>
-                        </div>
-
-                        <span class="card-menu">
-                            ⋮
+                        <span id="currentDate">
+                            Today
                         </span>
 
                     </div>
 
 
+                    <div class="user-mini">
+
+                        <div class="user-avatar"
+                            id="userAvatar">
+
+                            M
+
+                        </div>
+
+                        <div>
+
+                            <strong id="topUserName">
+                                Student
+                            </strong>
+
+                            <small>
+                                Student
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =============================================
+                 WELCOME SECTION
+                 ============================================= -->
+
+            <section class="welcome-section">
+
+
+                <div>
+
+                    <span class="welcome-badge">
+                        🎓 STUDYHUB DASHBOARD
+                    </span>
+
+
+                    <h2 id="welcomeMessage">
+                        Good Morning, Student 👋
+                    </h2>
+
+
+                    <p>
+                        Ready to learn something new today?
+                        Let's make today productive.
+                    </p>
+
+                </div>
+
+
+                <a href="courses.html"
+                    class="primary-btn">
+
+                    Start Learning →
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STAT CARDS
+                 ============================================= -->
+
+            <section class="stats-grid">
+
+
+                <!-- Courses -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        📚
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Total Courses
+                        </p>
+
+                        <h3>
+                            4
+                        </h3>
+
+                        <span class="stat-info">
+                            Courses available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Tasks -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Tasks
+                        </p>
+
+                        <h3 id="taskCount">
+                            0/0
+                        </h3>
+
+                        <span class="stat-info">
+                            Completed today
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Quiz -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🧠
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Quiz Average
+                        </p>
+
+                        <h3>
+                            82%
+                        </h3>
+
+                        <span class="stat-info">
+                            Keep improving!
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Study Time -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ⏱️
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Study Time
+                        </p>
+
+                        <h3>
+                            2h 35m
+                        </h3>
+
+                        <span class="stat-info">
+                            Today's study time
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 DASHBOARD GRID
+                 ============================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- =========================================
+                     STUDY PROGRESS PREVIEW
+                     ========================================= -->
+
+                <div class="dashboard-card progress-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Learning Progress
+                            </h3>
+
+                            <p>
+                                Your current course progress
+                            </p>
+
+                        </div>
+
+
+                        <a href="courses.html">
+                            View Courses
+                        </a>
+
+                    </div>
+
+
+
                     <!-- HTML -->
 
-                    <div class="subject-progress">
+                    <div class="progress-item">
 
-                        <div class="subject-info">
+                        <div class="progress-info">
 
                             <span>
-                                🌐 HTML
+                                HTML
                             </span>
 
                             <strong>
@@ -187,9 +479,12 @@
 
                         </div>
 
-                        <div class="subject-bar">
+                        <div class="progress-bar">
 
-                            <div class="subject-fill html-progress" style="width: 100%;">
+                            <div
+                                class="progress-fill html-progress"
+                                style="width: 100%;">
+
                             </div>
 
                         </div>
@@ -197,14 +492,15 @@
                     </div>
 
 
+
                     <!-- CSS -->
 
-                    <div class="subject-progress">
+                    <div class="progress-item">
 
-                        <div class="subject-info">
+                        <div class="progress-info">
 
                             <span>
-                                🎨 CSS
+                                CSS
                             </span>
 
                             <strong>
@@ -213,9 +509,12 @@
 
                         </div>
 
-                        <div class="subject-bar">
+                        <div class="progress-bar">
 
-                            <div class="subject-fill css-progress" style="width: 80%;">
+                            <div
+                                class="progress-fill css-progress"
+                                style="width: 80%;">
+
                             </div>
 
                         </div>
@@ -223,14 +522,15 @@
                     </div>
 
 
+
                     <!-- JavaScript -->
 
-                    <div class="subject-progress">
+                    <div class="progress-item">
 
-                        <div class="subject-info">
+                        <div class="progress-info">
 
                             <span>
-                                ⚡ JavaScript
+                                JavaScript
                             </span>
 
                             <strong>
@@ -239,9 +539,12 @@
 
                         </div>
 
-                        <div class="subject-bar">
+                        <div class="progress-bar">
 
-                            <div class="subject-fill js-progress" style="width: 60%;">
+                            <div
+                                class="progress-fill js-progress"
+                                style="width: 60%;">
+
                             </div>
 
                         </div>
@@ -249,14 +552,15 @@
                     </div>
 
 
+
                     <!-- Git -->
 
-                    <div class="subject-progress">
+                    <div class="progress-item">
 
-                        <div class="subject-info">
+                        <div class="progress-info">
 
                             <span>
-                                🔧 Git & GitHub
+                                Git & GitHub
                             </span>
 
                             <strong>
@@ -265,239 +569,392 @@
 
                         </div>
 
-                        <div class="subject-bar">
+                        <div class="progress-bar">
 
-                            <div class="subject-fill git-progress" style="width: 40%;">
+                            <div
+                                class="progress-fill git-progress"
+                                style="width: 40%;">
+
                             </div>
 
                         </div>
 
                     </div>
 
+
                 </div>
 
 
 
-                <!-- Today's Tasks -->
+                <!-- =========================================
+                     TODAY'S GOAL
+                     ========================================= -->
 
-                <div class="dashboard-card tasks-card">
+                <div class="dashboard-card goal-card">
+
 
                     <div class="card-header">
 
                         <div>
-                            <span class="card-small-title">
-                                ✅ TASKS
+
+                            <h3>
+                                Today's Goal
+                            </h3>
+
+                            <p>
+                                Keep up the good work!
+                            </p>
+
+                        </div>
+
+                        <span class="goal-icon">
+                            🎯
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-circle">
+
+                        <div>
+
+                            <strong>
+                                70%
+                            </strong>
+
+                            <span>
+                                Complete
                             </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="goal-text">
+
+                        You're doing great!
+                        Complete your remaining tasks
+                        to reach today's goal.
+
+                    </p>
+
+
+                    <a href="tasks.html"
+                        class="secondary-btn">
+
+                        View Tasks
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 BOTTOM GRID
+                 ============================================= -->
+
+            <section class="bottom-grid">
+
+
+                <!-- =========================================
+                     TODAY'S TASKS
+                     ========================================= -->
+
+                <div class="dashboard-card tasks-card">
+
+
+                    <div class="card-header">
+
+                        <div>
 
                             <h3>
                                 Today's Tasks
                             </h3>
-                        </div>
-
-                        <span class="task-count">
-                            3 Tasks
-                        </span>
-
-                    </div>
-
-
-                    <div class="dashboard-task-list">
-
-                        <div class="dashboard-task completed">
-
-                            <span class="task-check">
-                                ✓
-                            </span>
-
-                            <span>
-                                Complete HTML lesson
-                            </span>
-
-                        </div>
-
-
-                        <div class="dashboard-task completed">
-
-                            <span class="task-check">
-                                ✓
-                            </span>
-
-                            <span>
-                                Practice CSS
-                            </span>
-
-                        </div>
-
-
-                        <div class="dashboard-task">
-
-                            <span class="task-check">
-                                ○
-                            </span>
-
-                            <span>
-                                Practice JavaScript
-                            </span>
-
-                        </div>
-
-
-                        <div class="dashboard-task">
-
-                            <span class="task-check">
-                                ○
-                            </span>
-
-                            <span>
-                                Complete Quiz
-                            </span>
-
-                        </div>
-
-                    </div>
-
-
-                    <button class="dashboard-link-btn" id="viewTasksButton">
-
-                        View All Tasks →
-
-                    </button>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- Bottom Dashboard -->
-
-            <div class="dashboard-bottom">
-
-
-                <!-- Learning Goal -->
-
-                <div class="dashboard-card goal-card">
-
-                    <div class="card-header">
-
-                        <div>
-                            <span class="card-small-title">
-                                🎯 GOAL
-                            </span>
-
-                            <h3>
-                                Weekly Learning Goal
-                            </h3>
-                        </div>
-
-                    </div>
-
-
-                    <div class="goal-content">
-
-                        <div class="goal-circle">
-
-                            <span>
-                                75%
-                            </span>
-
-                        </div>
-
-
-                        <div class="goal-info">
-
-                            <h4>
-                                Keep going! 🚀
-                            </h4>
 
                             <p>
-                                You have completed 15 out of
-                                20 planned study sessions.
+                                Stay organized and productive
                             </p>
 
                         </div>
 
+
+                        <a href="tasks.html">
+                            View All
+                        </a>
+
                     </div>
+
+
+                    <div
+                        id="dashboardTasks"
+                        class="task-list">
+
+                        <!-- Tasks JavaScript se yahan aayengi -->
+
+                    </div>
+
+
+                    <a href="tasks.html"
+                        class="add-task-btn">
+
+                        + Add New Task
+
+                    </a>
+
 
                 </div>
 
 
 
-                <!-- Recent Notes -->
+                <!-- =========================================
+                     RECENT NOTES
+                     ========================================= -->
 
-                <div class="dashboard-card notes-preview-card">
+                <div class="dashboard-card notes-card">
+
 
                     <div class="card-header">
 
                         <div>
-                            <span class="card-small-title">
-                                📝 NOTES
-                            </span>
 
                             <h3>
                                 Recent Notes
                             </h3>
-                        </div>
-
-                    </div>
-
-
-                    <div class="recent-note">
-
-                        <span class="note-icon">
-                            📌
-                        </span>
-
-                        <div>
-
-                            <h4>
-                                JavaScript Functions
-                            </h4>
 
                             <p>
-                                Functions are reusable blocks...
+                                Your latest study notes
                             </p>
 
                         </div>
 
+
+                        <a href="notes.html">
+                            View All
+                        </a>
+
                     </div>
 
 
-                    <div class="recent-note">
+                    <div class="notes-list">
 
-                        <span class="note-icon">
-                            📌
-                        </span>
 
-                        <div>
+                        <div class="note-item">
 
-                            <h4>
-                                CSS Flexbox
-                            </h4>
+                            <div class="note-icon">
+                                📝
+                            </div>
 
-                            <p>
-                                Flexbox helps create layouts...
-                            </p>
+                            <div>
+
+                                <h4>
+                                    JavaScript Functions
+                                </h4>
+
+                                <p>
+                                    Learn reusable blocks of code
+                                </p>
+
+                            </div>
 
                         </div>
 
+
+
+                        <div class="note-item">
+
+                            <div class="note-icon">
+                                📄
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    HTML Forms
+                                </h4>
+
+                                <p>
+                                    Important form elements
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="note-item">
+
+                            <div class="note-icon">
+                                🎨
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    CSS Flexbox
+                                </h4>
+
+                                <p>
+                                    Flexbox layout basics
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
                     </div>
 
-
-                    <button class="dashboard-link-btn" id="viewNotesButton">
-
-                        View All Notes →
-
-                    </button>
 
                 </div>
 
-            </div>
 
-        </div>
+            </section>
 
-    </section>
 
-    <script src="./js/dashboard.js"></script>
+
+            <!-- =============================================
+                 QUICK ACTIONS
+                 ============================================= -->
+
+            <section class="dashboard-card quick-actions-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                        <p>
+                            Quickly access your study tools
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <a href="courses.html"
+                        class="quick-action">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Browse Courses
+                            </strong>
+
+                            <small>
+                                Continue learning
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="notes.html"
+                        class="quick-action">
+
+                        <span>
+                            📝
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Create Note
+                            </strong>
+
+                            <small>
+                                Save your ideas
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="tasks.html"
+                        class="quick-action">
+
+                        <span>
+                            ✅
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Add Task
+                            </strong>
+
+                            <small>
+                                Plan your day
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="tools.html"
+                        class="quick-action">
+
+                        <span>
+                            🤖
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                AI Tools
+                            </strong>
+
+                            <small>
+                                Explore smart tools
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/dashboard.js"></script>
+
 </body>
+
 </html>

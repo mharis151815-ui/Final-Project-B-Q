@@ -10,14 +10,15 @@ if (signupForm) {
 
         event.preventDefault();
 
-
-        // Get values from inputs
+        // Get values
 
         const name =
             document.getElementById("signupName").value.trim();
 
         const email =
-            document.getElementById("signupEmail").value.trim().toLowerCase();
+            document.getElementById("signupEmail").value
+                .trim()
+                .toLowerCase();
 
         const password =
             document.getElementById("signupPassword").value;
@@ -29,7 +30,7 @@ if (signupForm) {
             document.getElementById("terms").checked;
 
 
-        // Error message element
+        // Error message
 
         const errorMessage =
             document.getElementById("signupError");
@@ -37,15 +38,16 @@ if (signupForm) {
 
         // Hide previous error
 
-        errorMessage.style.display = "none";
+        if (errorMessage) {
+            errorMessage.style.display = "none";
+        }
 
 
         /* =================================================
            VALIDATION
            ================================================= */
 
-
-        // Name validation
+        // Name
 
         if (name.length < 3) {
 
@@ -57,7 +59,7 @@ if (signupForm) {
         }
 
 
-        // Email validation
+        // Email
 
         if (!email.includes("@")) {
 
@@ -69,7 +71,7 @@ if (signupForm) {
         }
 
 
-        // Password validation
+        // Password
 
         if (password.length < 6) {
 
@@ -81,7 +83,7 @@ if (signupForm) {
         }
 
 
-        // Confirm password
+        // Confirm Password
 
         if (password !== confirmPassword) {
 
@@ -93,7 +95,7 @@ if (signupForm) {
         }
 
 
-        // Terms validation
+        // Terms
 
         if (!terms) {
 
@@ -137,16 +139,14 @@ if (signupForm) {
         const newUser = {
 
             name: name,
-
             email: email,
-
             password: password
 
         };
 
 
         /* =================================================
-           SAVE USER IN LOCAL STORAGE
+           SAVE USER
            ================================================= */
 
         localStorage.setItem(
@@ -176,7 +176,8 @@ if (signupForm) {
            GO TO DASHBOARD
            ================================================= */
 
-        window.location.href = "dashboard.html";
+        window.location.href =
+            "dashboard.html";
 
     });
 
@@ -184,7 +185,7 @@ if (signupForm) {
 
 
 /* =====================================================
-   ERROR FUNCTION
+   SIGNUP ERROR FUNCTION
    ===================================================== */
 
 function showSignupError(message) {
@@ -192,9 +193,17 @@ function showSignupError(message) {
     const errorMessage =
         document.getElementById("signupError");
 
-    errorMessage.textContent = message;
 
-    errorMessage.style.display = "block";
+    if (errorMessage) {
+
+        errorMessage.textContent =
+            message;
+
+        errorMessage.style.display =
+            "block";
+
+    }
+
 }
 
 
@@ -203,7 +212,9 @@ function showSignupError(message) {
    ===================================================== */
 
 const signupPasswordToggle =
-    document.getElementById("signupPasswordToggle");
+    document.getElementById(
+        "signupPasswordToggle"
+    );
 
 
 if (signupPasswordToggle) {
@@ -213,23 +224,31 @@ if (signupPasswordToggle) {
         function () {
 
             const password =
-                document.getElementById("signupPassword");
+                document.getElementById(
+                    "signupPassword"
+                );
 
             const eye =
-                this.querySelector(".eye-icon");
+                this.querySelector(
+                    ".eye-icon"
+                );
 
 
             if (password.type === "password") {
 
                 password.type = "text";
 
-                eye.classList.add("eye-off");
+                eye.classList.add(
+                    "eye-off"
+                );
 
             } else {
 
                 password.type = "password";
 
-                eye.classList.remove("eye-off");
+                eye.classList.remove(
+                    "eye-off"
+                );
 
             }
 
@@ -244,7 +263,9 @@ if (signupPasswordToggle) {
    ===================================================== */
 
 const confirmPasswordToggle =
-    document.getElementById("confirmPasswordToggle");
+    document.getElementById(
+        "confirmPasswordToggle"
+    );
 
 
 if (confirmPasswordToggle) {
@@ -254,23 +275,31 @@ if (confirmPasswordToggle) {
         function () {
 
             const password =
-                document.getElementById("confirmPassword");
+                document.getElementById(
+                    "confirmPassword"
+                );
 
             const eye =
-                this.querySelector(".eye-icon");
+                this.querySelector(
+                    ".eye-icon"
+                );
 
 
             if (password.type === "password") {
 
                 password.type = "text";
 
-                eye.classList.add("eye-off");
+                eye.classList.add(
+                    "eye-off"
+                );
 
             } else {
 
                 password.type = "password";
 
-                eye.classList.remove("eye-off");
+                eye.classList.remove(
+                    "eye-off"
+                );
 
             }
 
@@ -279,7 +308,187 @@ if (confirmPasswordToggle) {
 
 }
 
-/* Login Password */
+
+/* =====================================================
+   STUDYHUB - LOGIN
+   ===================================================== */
+
+const loginForm =
+    document.getElementById(
+        "loginForm"
+    );
+
+
+if (loginForm) {
+
+    loginForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+
+            /* =================================================
+               GET LOGIN VALUES
+               ================================================= */
+
+            const email =
+                document.getElementById(
+                    "loginEmail"
+                ).value
+                    .trim()
+                    .toLowerCase();
+
+
+            const password =
+                document.getElementById(
+                    "loginPassword"
+                ).value;
+
+
+            /* =================================================
+               ERROR MESSAGE
+               ================================================= */
+
+            const errorMessage =
+                document.getElementById(
+                    "loginError"
+                );
+
+
+            if (errorMessage) {
+
+                errorMessage.style.display =
+                    "none";
+
+            }
+
+
+            /* =================================================
+               CHECK EMPTY FIELDS
+               ================================================= */
+
+            if (!email || !password) {
+
+                showLoginError(
+                    "Please enter email and password."
+                );
+
+                return;
+            }
+
+
+            /* =================================================
+               GET SAVED USER
+               ================================================= */
+
+            const savedUser =
+                localStorage.getItem(
+                    "studyHubUser"
+                );
+
+
+            if (!savedUser) {
+
+                showLoginError(
+                    "No account found. Please signup first."
+                );
+
+                return;
+            }
+
+
+            /* =================================================
+               CONVERT JSON TO OBJECT
+               ================================================= */
+
+            const user =
+                JSON.parse(savedUser);
+
+
+            /* =================================================
+               CHECK EMAIL
+               ================================================= */
+
+            if (user.email !== email) {
+
+                showLoginError(
+                    "Email or password is incorrect."
+                );
+
+                return;
+            }
+
+
+            /* =================================================
+               CHECK PASSWORD
+               ================================================= */
+
+            if (user.password !== password) {
+
+                showLoginError(
+                    "Email or password is incorrect."
+                );
+
+                return;
+            }
+
+
+            /* =================================================
+               LOGIN SUCCESSFUL
+               ================================================= */
+
+            localStorage.setItem(
+                "studyHubLoggedIn",
+                "true"
+            );
+
+
+            /* =================================================
+               GO TO DASHBOARD
+               ================================================= */
+
+            window.location.href =
+                "dashboard.html";
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   LOGIN ERROR FUNCTION
+   ===================================================== */
+
+function showLoginError(message) {
+
+    const errorMessage =
+        document.getElementById(
+            "loginError"
+        );
+
+
+    if (errorMessage) {
+
+        errorMessage.textContent =
+            message;
+
+        errorMessage.style.display =
+            "block";
+
+    } else {
+
+        alert(message);
+
+    }
+
+}
+
+
+/* =====================================================
+   LOGIN PASSWORD SHOW / HIDE
+   ===================================================== */
 
 const loginPasswordToggle =
     document.getElementById(
@@ -304,13 +513,9 @@ if (loginPasswordToggle) {
                 );
 
 
-            if (
-                password.type ===
-                "password"
-            ) {
+            if (password.type === "password") {
 
-                password.type =
-                    "text";
+                password.type = "text";
 
                 eye.classList.add(
                     "eye-off"
@@ -318,8 +523,7 @@ if (loginPasswordToggle) {
 
             } else {
 
-                password.type =
-                    "password";
+                password.type = "password";
 
                 eye.classList.remove(
                     "eye-off"
