@@ -1,151 +1,503 @@
- <!-- =====================================================
-         3. STUDENT DASHBOARD
-         ===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Css/dashboard.css">
+</head>
+<body>
+        <!-- =====================================================
+     3. STUDENT DASHBOARD
+     ===================================================== -->
 
-    <!-- Is section ka complete code next step mein add hoga -->
+    <section class="dashboard-section" id="dashboard">
 
+        <div class="dashboard-container">
 
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
 
-    <!-- =====================================================
-         4. LEARNING / COURSES
-         ===================================================== -->
+                <div>
+                    <span class="dashboard-label">
+                        📊 STUDENT DASHBOARD
+                    </span>
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                    <h2>
+                        Good Morning,
+                        <span id="dashboardUserName">Student</span> 👋
+                    </h2>
 
+                    <p>
+                        Keep learning and achieve your goals today.
+                    </p>
+                </div>
 
+                <div class="dashboard-date">
+                    <span>📅</span>
+                    <span id="dashboardDate"></span>
+                </div>
 
-    <!-- =====================================================
-         5. COURSE ROADMAP
-         ===================================================== -->
+            </div>
 
-    <!-- Is section ka complete code next step mein add hoga -->
 
+            <!-- Dashboard Stats -->
 
+            <div class="dashboard-stats">
 
-    <!-- =====================================================
-         6. NOTES MANAGER
-         ===================================================== -->
+                <!-- Courses -->
+                <div class="stat-card">
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                    <div class="stat-icon courses-icon">
+                        📚
+                    </div>
 
+                    <div class="stat-content">
 
+                        <span>Total Courses</span>
 
-    <!-- =====================================================
-         7. TODO / TASK MANAGER
-         ===================================================== -->
+                        <h3 id="totalCourses">
+                            4
+                        </h3>
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                        <small>
+                            Active courses
+                        </small>
 
+                    </div>
 
+                </div>
 
-    <!-- =====================================================
-         8. QUIZ SYSTEM - HARIS
-         ===================================================== -->
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                <!-- Tasks -->
+                <div class="stat-card">
 
+                    <div class="stat-icon tasks-icon">
+                        ✅
+                    </div>
 
+                    <div class="stat-content">
 
-    <!-- =====================================================
-         9. POMODORO TIMER - HARIS
-         ===================================================== -->
+                        <span>Tasks Completed</span>
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                        <h3 id="completedTasks">
+                            7/10
+                        </h3>
 
+                        <small>
+                            Today's tasks
+                        </small>
 
+                    </div>
 
-    <!-- =====================================================
-         10. EXPENSE TRACKER
-         ===================================================== -->
+                </div>
 
-    <!-- Is section ka complete code next step mein add hoga -->
 
+                <!-- Quiz -->
+                <div class="stat-card">
 
+                    <div class="stat-icon quiz-icon">
+                        🧠
+                    </div>
 
-    <!-- =====================================================
-         11. STUDY PROGRESS - HARIS
-         ===================================================== -->
+                    <div class="stat-content">
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                        <span>Quiz Average</span>
 
+                        <h3 id="quizAverage">
+                            82%
+                        </h3>
 
+                        <small>
+                            Average score
+                        </small>
 
-    <!-- =====================================================
-         12. AI / SMART TOOLS
-         ===================================================== -->
+                    </div>
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                </div>
 
 
+                <!-- Study Time -->
+                <div class="stat-card">
 
-    <!-- =====================================================
-         13. SEARCH - HARIS
-         ===================================================== -->
+                    <div class="stat-icon time-icon">
+                        ⏱️
+                    </div>
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                    <div class="stat-content">
 
+                        <span>Study Time</span>
 
+                        <h3 id="studyTime">
+                            12h
+                        </h3>
 
-    <!-- =====================================================
-         14. FAVORITES / BOOKMARKS - HARIS
-         ===================================================== -->
+                        <small>
+                            This week
+                        </small>
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                    </div>
 
+                </div>
 
+            </div>
 
-    <!-- =====================================================
-         15. DARK / LIGHT MODE - HARIS
-         ===================================================== -->
 
-    <!-- HARIS WILL ADD CODE HERE -->
+            <!-- Main Dashboard Grid -->
 
+            <div class="dashboard-grid">
 
 
-    <!-- =====================================================
-         16. NOTIFICATIONS / TOASTS - HARIS
-         ===================================================== -->
+                <!-- Study Progress -->
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                <div class="dashboard-card progress-card">
 
+                    <div class="card-header">
 
+                        <div>
+                            <span class="card-small-title">
+                                📈 PROGRESS
+                            </span>
 
-    <!-- =====================================================
-         17. PROFILE PAGE
-         ===================================================== -->
+                            <h3>
+                                Study Progress
+                            </h3>
+                        </div>
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                        <span class="card-menu">
+                            ⋮
+                        </span>
 
+                    </div>
 
 
-    <!-- =====================================================
-         18. SETTINGS - HARIS
-         ===================================================== -->
+                    <!-- HTML -->
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                    <div class="subject-progress">
 
+                        <div class="subject-info">
 
+                            <span>
+                                🌐 HTML
+                            </span>
 
-    <!-- =====================================================
-         19. LOCALSTORAGE
-         ===================================================== -->
+                            <strong>
+                                100%
+                            </strong>
 
-    <!-- LocalStorage ka JavaScript different sections
-         ke andar use hoga -->
+                        </div>
 
+                        <div class="subject-bar">
 
+                            <div class="subject-fill html-progress" style="width: 100%;">
+                            </div>
 
-    <!-- =====================================================
-         20. JAVASCRIPT CONCEPTS
-         ===================================================== -->
+                        </div>
 
-    <!-- JavaScript concepts different features mein
-         demonstrate honge -->
+                    </div>
 
 
+                    <!-- CSS -->
 
-    <!-- =====================================================
-         21. RESPONSIVE DESIGN
-         ===================================================== -->
+                    <div class="subject-progress">
 
-    <!-- Responsive CSS style.css mein hoga -->
+                        <div class="subject-info">
+
+                            <span>
+                                🎨 CSS
+                            </span>
+
+                            <strong>
+                                80%
+                            </strong>
+
+                        </div>
+
+                        <div class="subject-bar">
+
+                            <div class="subject-fill css-progress" style="width: 80%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JavaScript -->
+
+                    <div class="subject-progress">
+
+                        <div class="subject-info">
+
+                            <span>
+                                ⚡ JavaScript
+                            </span>
+
+                            <strong>
+                                60%
+                            </strong>
+
+                        </div>
+
+                        <div class="subject-bar">
+
+                            <div class="subject-fill js-progress" style="width: 60%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Git -->
+
+                    <div class="subject-progress">
+
+                        <div class="subject-info">
+
+                            <span>
+                                🔧 Git & GitHub
+                            </span>
+
+                            <strong>
+                                40%
+                            </strong>
+
+                        </div>
+
+                        <div class="subject-bar">
+
+                            <div class="subject-fill git-progress" style="width: 40%;">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Today's Tasks -->
+
+                <div class="dashboard-card tasks-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="card-small-title">
+                                ✅ TASKS
+                            </span>
+
+                            <h3>
+                                Today's Tasks
+                            </h3>
+                        </div>
+
+                        <span class="task-count">
+                            3 Tasks
+                        </span>
+
+                    </div>
+
+
+                    <div class="dashboard-task-list">
+
+                        <div class="dashboard-task completed">
+
+                            <span class="task-check">
+                                ✓
+                            </span>
+
+                            <span>
+                                Complete HTML lesson
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-task completed">
+
+                            <span class="task-check">
+                                ✓
+                            </span>
+
+                            <span>
+                                Practice CSS
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-task">
+
+                            <span class="task-check">
+                                ○
+                            </span>
+
+                            <span>
+                                Practice JavaScript
+                            </span>
+
+                        </div>
+
+
+                        <div class="dashboard-task">
+
+                            <span class="task-check">
+                                ○
+                            </span>
+
+                            <span>
+                                Complete Quiz
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="dashboard-link-btn" id="viewTasksButton">
+
+                        View All Tasks →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Bottom Dashboard -->
+
+            <div class="dashboard-bottom">
+
+
+                <!-- Learning Goal -->
+
+                <div class="dashboard-card goal-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="card-small-title">
+                                🎯 GOAL
+                            </span>
+
+                            <h3>
+                                Weekly Learning Goal
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="goal-content">
+
+                        <div class="goal-circle">
+
+                            <span>
+                                75%
+                            </span>
+
+                        </div>
+
+
+                        <div class="goal-info">
+
+                            <h4>
+                                Keep going! 🚀
+                            </h4>
+
+                            <p>
+                                You have completed 15 out of
+                                20 planned study sessions.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Recent Notes -->
+
+                <div class="dashboard-card notes-preview-card">
+
+                    <div class="card-header">
+
+                        <div>
+                            <span class="card-small-title">
+                                📝 NOTES
+                            </span>
+
+                            <h3>
+                                Recent Notes
+                            </h3>
+                        </div>
+
+                    </div>
+
+
+                    <div class="recent-note">
+
+                        <span class="note-icon">
+                            📌
+                        </span>
+
+                        <div>
+
+                            <h4>
+                                JavaScript Functions
+                            </h4>
+
+                            <p>
+                                Functions are reusable blocks...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="recent-note">
+
+                        <span class="note-icon">
+                            📌
+                        </span>
+
+                        <div>
+
+                            <h4>
+                                CSS Flexbox
+                            </h4>
+
+                            <p>
+                                Flexbox helps create layouts...
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <button class="dashboard-link-btn" id="viewNotesButton">
+
+                        View All Notes →
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <script src="./js/dashboard.js"></script>
+</body>
+</html>

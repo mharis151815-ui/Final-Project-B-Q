@@ -1,151 +1,247 @@
- <!-- =====================================================
-         3. STUDENT DASHBOARD
-         ===================================================== -->
+<!DOCTYPE html>
+<html lang="en">
 
-    <!-- Is section ka complete code next step mein add hoga -->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Login | StudyHub</title>
+
+    <link rel="stylesheet"
+        href="Css/auth.css">
+
+</head>
 
 
-
-    <!-- =====================================================
-         4. LEARNING / COURSES
-         ===================================================== -->
-
-    <!-- Is section ka complete code next step mein add hoga -->
-
-
-
-    <!-- =====================================================
-         5. COURSE ROADMAP
-         ===================================================== -->
-
-    <!-- Is section ka complete code next step mein add hoga -->
-
+<body>
 
 
     <!-- =====================================================
-         6. NOTES MANAGER
+         LOGIN PAGE
          ===================================================== -->
 
-    <!-- Is section ka complete code next step mein add hoga -->
+    <main class="auth-page">
+
+
+        <!-- Left Side -->
+
+        <section class="auth-info">
+
+            <a href="index.html"
+                class="auth-logo">
+
+                🎓 StudyHub
+
+            </a>
+
+
+            <div class="auth-info-content">
+
+                <span class="auth-badge">
+                    🚀 WELCOME BACK
+                </span>
+
+                <h1>
+                    Keep Learning.
+                    <span>Keep Growing.</span>
+                </h1>
+
+                <p>
+                    Login to your StudyHub account and
+                    continue your learning journey.
+                </p>
+
+
+                <div class="auth-features">
+
+                    <div>
+                        <span>✓</span>
+                        Manage your courses
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Organize your notes
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Track your learning progress
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
 
 
 
-    <!-- =====================================================
-         7. TODO / TASK MANAGER
-         ===================================================== -->
+        <!-- Right Side -->
 
-    <!-- Is section ka complete code next step mein add hoga -->
+        <section class="auth-form-section">
 
-
-
-    <!-- =====================================================
-         8. QUIZ SYSTEM - HARIS
-         ===================================================== -->
-
-    <!-- HARIS WILL ADD CODE HERE -->
+            <div class="auth-card">
 
 
+                <div class="auth-heading">
 
-    <!-- =====================================================
-         9. POMODORO TIMER - HARIS
-         ===================================================== -->
+                    <h2>
+                        Welcome Back 👋
+                    </h2>
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                    <p>
+                        Login to continue to StudyHub.
+                    </p>
 
-
-
-    <!-- =====================================================
-         10. EXPENSE TRACKER
-         ===================================================== -->
-
-    <!-- Is section ka complete code next step mein add hoga -->
+                </div>
 
 
+                <!-- Error Message -->
 
-    <!-- =====================================================
-         11. STUDY PROGRESS - HARIS
-         ===================================================== -->
+                <div
+                    id="loginError"
+                    class="auth-message error-message">
 
-    <!-- HARIS WILL ADD CODE HERE -->
-
-
-
-    <!-- =====================================================
-         12. AI / SMART TOOLS
-         ===================================================== -->
-
-    <!-- Is section ka complete code next step mein add hoga -->
+                </div>
 
 
+                <!-- Login Form -->
 
-    <!-- =====================================================
-         13. SEARCH - HARIS
-         ===================================================== -->
+                <form id="loginForm">
 
-    <!-- HARIS WILL ADD CODE HERE -->
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required>
+
+                    </div>
 
 
 
-    <!-- =====================================================
-         14. FAVORITES / BOOKMARKS - HARIS
-         ===================================================== -->
+                    <!-- Password -->
 
-    <!-- HARIS WILL ADD CODE HERE -->
+                    <div class="form-group">
 
+                        <div class="label-row">
 
+                            <label for="loginPassword">
+                                Password
+                            </label>
 
-    <!-- =====================================================
-         15. DARK / LIGHT MODE - HARIS
-         ===================================================== -->
+                            <a href="#">
+                                Forgot Password?
+                            </a>
 
-    <!-- HARIS WILL ADD CODE HERE -->
-
-
-
-    <!-- =====================================================
-         16. NOTIFICATIONS / TOASTS - HARIS
-         ===================================================== -->
-
-    <!-- HARIS WILL ADD CODE HERE -->
+                        </div>
 
 
+                        <div class="password-wrapper">
 
-    <!-- =====================================================
-         17. PROFILE PAGE
-         ===================================================== -->
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
 
-    <!-- Is section ka complete code next step mein add hoga -->
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="loginPasswordToggle">
 
+                               <span class="eye-icon"></span>
 
+                            </button>
 
-    <!-- =====================================================
-         18. SETTINGS - HARIS
-         ===================================================== -->
+                        </div>
 
-    <!-- HARIS WILL ADD CODE HERE -->
-
-
-
-    <!-- =====================================================
-         19. LOCALSTORAGE
-         ===================================================== -->
-
-    <!-- LocalStorage ka JavaScript different sections
-         ke andar use hoga -->
+                    </div>
 
 
 
-    <!-- =====================================================
-         20. JAVASCRIPT CONCEPTS
-         ===================================================== -->
+                    <!-- Remember Me -->
 
-    <!-- JavaScript concepts different features mein
-         demonstrate honge -->
+                    <div class="remember-row">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe">
+
+                            Remember me
+
+                        </label>
+
+                    </div>
 
 
 
-    <!-- =====================================================
-         21. RESPONSIVE DESIGN
-         ===================================================== -->
+                    <!-- Login Button -->
 
-    <!-- Responsive CSS style.css mein hoga -->
+                    <button
+                        type="submit"
+                        class="auth-submit-btn">
+
+                        Login to StudyHub →
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Signup Link -->
+
+                <p class="auth-switch">
+
+                    Don't have an account?
+
+                    <a href="signup.html">
+                        Create Account
+                    </a>
+
+                </p>
+
+
+
+                <!-- Back Home -->
+
+                <a
+                    href="index.html"
+                    class="back-home">
+
+                    ← Back to Home
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

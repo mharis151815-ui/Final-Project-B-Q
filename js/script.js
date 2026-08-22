@@ -1,477 +1,54 @@
 /* =====================================================
-   1. LANDING / HOME PAGE
+   STUDYHUB - HOME PAGE JAVASCRIPT
    ===================================================== */
 
 
-/* =====================================================
-   1. LANDING / HOME PAGE
-   ===================================================== */
+/* =========================
+   PAGE LOADED
+========================= */
 
+console.log("StudyHub Home Page Loaded");
 
-/* Navbar Get Started Button */
 
-const getStartedButton =
-    document.getElementById("getStartedButton");
 
-getStartedButton.addEventListener("click", function () {
+/* =========================
+   SMOOTH SCROLL
+========================= */
 
-    document.getElementById("auth").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-/* Hero Get Started Button */
-
-const heroGetStartedButton =
-    document.getElementById("heroGetStartedButton");
-
-heroGetStartedButton.addEventListener("click", function () {
-
-    document.getElementById("auth").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-/* Explore Features Button */
-
-const exploreButton =
-    document.getElementById("exploreButton");
-
-exploreButton.addEventListener("click", function () {
-
-    document.getElementById("features").scrollIntoView({
-        behavior: "smooth"
-    });
-
-});
-
-
-/* Navbar Login Button */
-
-const loginButton =
-    document.getElementById("loginButton");
-
-loginButton.addEventListener("click", function () {
-
-    document.getElementById("auth").scrollIntoView({
-        behavior: "smooth"
-    });
-
-    showLoginForm();
-
-});
-
-
-/* About Button */
-
-const aboutButton =
-    document.getElementById("aboutButton");
-
-aboutButton.addEventListener("click", function () {
-
-    alert("Welcome to StudyHub! 🎓");
-
-});
-
-
-
-/* =====================================================
-   2. LOGIN & SIGNUP
-   ===================================================== */
-
-
-/* =====================================================
-   2. LOGIN & SIGNUP
-   ===================================================== */
-
-
-/* Get Form Boxes */
-
-const signupBox =
-    document.getElementById("signupBox");
-
-const loginBox =
-    document.getElementById("loginBox");
-
-
-/* Switch Buttons */
-
-const showLogin =
-    document.getElementById("showLogin");
-
-const showSignup =
-    document.getElementById("showSignup");
-
-
-/* Forms */
-
-const signupForm =
-    document.getElementById("signupForm");
-
-const loginForm =
-    document.getElementById("loginForm");
-
-
-/* Show Login Form Function */
-
-function showLoginForm() {
-
-    signupBox.classList.add("hidden");
-
-    loginBox.classList.remove("hidden");
-
-}
-
-
-/* Show Signup Form Function */
-
-function showSignupForm() {
-
-    loginBox.classList.add("hidden");
-
-    signupBox.classList.remove("hidden");
-
-}
-
-
-/* Login Button */
-
-showLogin.addEventListener("click", function () {
-
-    showLoginForm();
-
-});
-
-
-/* Signup Button */
-
-showSignup.addEventListener("click", function () {
-
-    showSignupForm();
-
-});
-
-
-/* =====================================================
-   SIGNUP
-   ===================================================== */
-
-signupForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-
-    /* Get Input Values */
-
-    const name =
-        document.getElementById("signupName").value.trim();
-
-    const email =
-        document.getElementById("signupEmail").value.trim();
-
-    const password =
-        document.getElementById("signupPassword").value;
-
-    const confirmPassword =
-        document.getElementById("confirmPassword").value;
-
-
-    /* Get Error Elements */
-
-    const nameError =
-        document.getElementById("signupNameError");
-
-    const emailError =
-        document.getElementById("signupEmailError");
-
-    const passwordError =
-        document.getElementById("signupPasswordError");
-
-    const confirmPasswordError =
-        document.getElementById("confirmPasswordError");
-
-
-    /* Clear Old Errors */
-
-    nameError.textContent = "";
-
-    emailError.textContent = "";
-
-    passwordError.textContent = "";
-
-    confirmPasswordError.textContent = "";
-
-
-    /* Validation Variable */
-
-    let isValid = true;
-
-
-    /* Name Validation */
-
-    if (name === "") {
-
-        nameError.textContent =
-            "Name is required";
-
-        isValid = false;
-
-    }
-
-
-    /* Email Validation */
-
-    if (email === "") {
-
-        emailError.textContent =
-            "Email is required";
-
-        isValid = false;
-
-    }
-
-
-    /* Password Validation */
-
-    if (password === "") {
-
-        passwordError.textContent =
-            "Password is required";
-
-        isValid = false;
-
-    }
-
-    else if (password.length < 6) {
-
-        passwordError.textContent =
-            "Password must be at least 6 characters";
-
-        isValid = false;
-
-    }
-
-
-    /* Confirm Password Validation */
-
-    if (confirmPassword === "") {
-
-        confirmPasswordError.textContent =
-            "Please confirm your password";
-
-        isValid = false;
-
-    }
-
-    else if (password !== confirmPassword) {
-
-        confirmPasswordError.textContent =
-            "Passwords do not match";
-
-        isValid = false;
-
-    }
-
-
-    /* If Form Is Valid */
-
-    if (isValid) {
-
-
-        /* Create User Object */
-
-        const user = {
-
-            name: name,
-
-            email: email,
-
-            password: password
-
-        };
-
-
-        /* Save User In LocalStorage */
-
-        localStorage.setItem(
-            "studyHubUser",
-            JSON.stringify(user)
-        );
-
-
-        alert(
-            "Account created successfully! 🎉"
-        );
-
-
-        /* Clear Signup Form */
-
-        signupForm.reset();
-
-
-        /* Show Login Form */
-
-        showLoginForm();
-
-    }
-
-});
-
-
-
-/* =====================================================
-   LOGIN
-   ===================================================== */
-
-loginForm.addEventListener("submit", function (event) {
-
-    event.preventDefault();
-
-
-    /* Get Login Values */
-
-    const email =
-        document.getElementById("loginEmail").value.trim();
-
-    const password =
-        document.getElementById("loginPassword").value;
-
-
-    /* Get Error Elements */
-
-    const emailError =
-        document.getElementById("loginEmailError");
-
-    const passwordError =
-        document.getElementById("loginPasswordError");
-
-
-    /* Clear Old Errors */
-
-    emailError.textContent = "";
-
-    passwordError.textContent = "";
-
-
-    /* Validation */
-
-    let isValid = true;
-
-
-    if (email === "") {
-
-        emailError.textContent =
-            "Email is required";
-
-        isValid = false;
-
-    }
-
-
-    if (password === "") {
-
-        passwordError.textContent =
-            "Password is required";
-
-        isValid = false;
-
-    }
-
-
-    /* Stop If Empty */
-
-    if (!isValid) {
-
-        return;
-
-    }
-
-
-    /* Get Saved User */
-
-    const savedUser =
-        JSON.parse(
-            localStorage.getItem("studyHubUser")
-        );
-
-
-    /* Check User Exists */
-
-    if (savedUser === null) {
-
-        alert(
-            "Account not found. Please create an account first."
-        );
-
-        return;
-
-    }
-
-
-    /* Check Email */
-
-    if (email !== savedUser.email) {
-
-        emailError.textContent =
-            "Email is incorrect";
-
-        return;
-
-    }
-
-
-    /* Check Password */
-
-    if (password !== savedUser.password) {
-
-        passwordError.textContent =
-            "Password is incorrect";
-
-        return;
-
-    }
-
-
-    /* Login Success */
-
-    alert(
-        "Login successful! Welcome " +
-        savedUser.name +
-        " 🎓"
+const featureLinks =
+    document.querySelectorAll(
+        'a[href^="#"]'
     );
 
 
-    /* Save Login State */
+featureLinks.forEach(function (link) {
 
-    localStorage.setItem(
-        "isLoggedIn",
-        "true"
+    link.addEventListener(
+        "click",
+        function (event) {
+
+            const targetId =
+                this.getAttribute("href");
+
+            const target =
+                document.querySelector(targetId);
+
+
+            if (target) {
+
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth"
+                });
+
+            }
+
+        }
     );
-
-
-    /* Reset Login Form */
-
-    loginForm.reset();
-
-
-    /*
-       Dashboard integration Section 3 mein hogi.
-       Wahan login ke baad dashboard show karenge.
-    */
 
 });
 
-
-/* =====================================================
-   3. STUDENT DASHBOARD
-   ===================================================== */
-
-
-/* Code will be added later */
 
 
 /* =====================================================
