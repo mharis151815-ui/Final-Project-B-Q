@@ -752,3 +752,65 @@ a {
 
     transform: rotate(-45deg);
 }
+
+
+/* =====================================================
+   SECTION 21 - RESPONSIVE DESIGN
+   LOGIN & SIGNUP
+   ===================================================== */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .auth-page {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .auth-info {
+
+        display: none;
+
+    }
+
+    .auth-form-section {
+
+        min-height: 100vh;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .auth-form-section {
+
+        padding: 20px 15px;
+
+    }
+
+    .auth-card {
+
+        padding: 25px 20px;
+
+    }
+
+    .auth-heading h2 {
+
+        font-size: 25px;
+
+    }
+
+    .auth-submit-btn {
+
+        width: 100%;
+
+    }
+
+}

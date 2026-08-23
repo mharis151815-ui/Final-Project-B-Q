@@ -1184,3 +1184,96 @@ button {
     }
 
 }
+
+
+
+/* =====================================================
+   SECTION 21 - RESPONSIVE DESIGN
+   DASHBOARD
+   ===================================================== */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+
+        width: 200px;
+
+    }
+
+    .dashboard-main {
+
+        margin-left: 200px;
+
+        padding: 25px 20px;
+
+    }
+
+    .dashboard-cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+
+        width: 70px;
+
+    }
+
+    .sidebar-logo {
+
+        font-size: 0;
+
+        text-align: center;
+
+    }
+
+    .sidebar-logo::first-letter {
+
+        font-size: 25px;
+
+    }
+
+    .nav-link span {
+
+        display: none;
+
+    }
+
+    .nav-title {
+
+        display: none;
+
+    }
+
+    .logout-btn span {
+
+        display: none;
+
+    }
+
+    .dashboard-main {
+
+        margin-left: 70px;
+
+        padding: 20px 15px;
+
+    }
+
+    .dashboard-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

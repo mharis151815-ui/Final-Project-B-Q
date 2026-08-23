@@ -5,16 +5,13 @@
 
     <meta charset="UTF-8">
 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Tasks | StudyHub</title>
 
-    <link rel="stylesheet"
-        href="Css/dashboard.css">
+    <link rel="stylesheet" href="Css/dashboard.css">
 
-    <link rel="stylesheet"
-        href="Css/tasks.css">
+    <link rel="stylesheet" href="Css/tasks.css">
 
 </head>
 
@@ -41,8 +38,7 @@
             </div>
 
 
-            <a href="dashboard.html"
-                class="nav-link">
+            <a href="dashboard.html" class="nav-link">
 
                 📊
                 <span>Dashboard</span>
@@ -50,8 +46,7 @@
             </a>
 
 
-            <a href="courses.html"
-                class="nav-link">
+            <a href="courses.html" class="nav-link">
 
                 📚
                 <span>Courses</span>
@@ -59,8 +54,7 @@
             </a>
 
 
-            <a href="notes.html"
-                class="nav-link">
+            <a href="notes.html" class="nav-link">
 
                 📝
                 <span>Notes</span>
@@ -68,8 +62,7 @@
             </a>
 
 
-            <a href="tasks.html"
-                class="nav-link active">
+            <a href="tasks.html" class="nav-link active">
 
                 ✅
                 <span>Tasks</span>
@@ -84,8 +77,7 @@
 
             <!-- HARIS -->
 
-            <a href="quiz.html"
-                class="nav-link">
+            <a href="quiz.html" class="nav-link">
 
                 🧠
                 <span>Quiz</span>
@@ -95,8 +87,7 @@
 
             <!-- HARIS -->
 
-            <a href="pomodoro.html"
-                class="nav-link">
+            <a href="pomodoro.html" class="nav-link">
 
                 ⏱️
                 <span>Pomodoro</span>
@@ -106,8 +97,7 @@
 
             <!-- SECTION 10 -->
 
-            <a href="expenses.html"
-                class="nav-link">
+            <a href="expenses.html" class="nav-link">
 
                 💰
                 <span>Expenses</span>
@@ -117,8 +107,7 @@
 
             <!-- SECTION 12 -->
 
-            <a href="tools.html"
-                class="nav-link">
+            <a href="tools.html" class="nav-link">
 
                 🤖
                 <span>AI Tools</span>
@@ -131,8 +120,7 @@
             </div>
 
 
-            <a href="profile.html"
-                class="nav-link">
+            <a href="profile.html" class="nav-link">
 
                 👤
                 <span>Profile</span>
@@ -142,8 +130,7 @@
 
             <!-- HARIS -->
 
-            <a href="settings.html"
-                class="nav-link">
+            <a href="settings.html" class="nav-link">
 
                 ⚙️
                 <span>Settings</span>
@@ -157,9 +144,7 @@
 
         <div class="sidebar-bottom">
 
-            <button
-                id="logoutBtn"
-                class="logout-btn">
+            <button id="logoutBtn" class="logout-btn">
 
                 🚪
                 <span>Logout</span>
@@ -202,9 +187,7 @@
             </div>
 
 
-            <button
-                id="addTaskBtn"
-                class="add-task-btn">
+            <button id="addTaskBtn" class="add-task-btn">
 
                 + Add New Task
 
@@ -299,37 +282,28 @@
 
                 🔍
 
-                <input
-                    type="text"
-                    id="searchTask"
-                    placeholder="Search tasks...">
+                <input type="text" id="searchTask" placeholder="Search tasks...">
 
             </div>
 
 
             <div class="task-filters">
 
-                <button
-                    class="filter-btn active"
-                    data-filter="all">
+                <button class="filter-btn active" data-filter="all">
 
                     All
 
                 </button>
 
 
-                <button
-                    class="filter-btn"
-                    data-filter="pending">
+                <button class="filter-btn" data-filter="pending">
 
                     Pending
 
                 </button>
 
 
-                <button
-                    class="filter-btn"
-                    data-filter="completed">
+                <button class="filter-btn" data-filter="completed">
 
                     Completed
 
@@ -345,9 +319,7 @@
              TASK FORM
              ================================================= -->
 
-        <div
-            id="taskFormBox"
-            class="task-form-box">
+        <div id="taskFormBox" class="task-form-box">
 
 
             <h2 id="taskFormTitle">
@@ -366,11 +338,7 @@
                         Task
                     </label>
 
-                    <input
-                        type="text"
-                        id="taskTitle"
-                        placeholder="Enter your task"
-                        required>
+                    <input type="text" id="taskTitle" placeholder="Enter your task" required>
 
                 </div>
 
@@ -410,9 +378,7 @@
                         Due Date
                     </label>
 
-                    <input
-                        type="date"
-                        id="taskDate">
+                    <input type="date" id="taskDate">
 
                 </div>
 
@@ -421,19 +387,14 @@
 
                 <div class="form-buttons">
 
-                    <button
-                        type="submit"
-                        class="save-task-btn">
+                    <button type="submit" class="save-task-btn">
 
                         Save Task
 
                     </button>
 
 
-                    <button
-                        type="button"
-                        id="cancelTaskBtn"
-                        class="cancel-task-btn">
+                    <button type="button" id="cancelTaskBtn" class="cancel-task-btn">
 
                         Cancel
 
@@ -467,9 +428,7 @@
             </div>
 
 
-            <div
-                id="tasksContainer"
-                class="tasks-container">
+            <div id="tasksContainer" class="tasks-container">
 
             </div>
 
@@ -481,6 +440,7 @@
 
 
 
+    <script src="js/storage.js"></script>
     <script src="js/tasks.js"></script>
 
 </body>

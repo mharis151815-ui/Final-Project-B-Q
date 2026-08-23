@@ -658,3 +658,56 @@
     }
 
 }
+
+
+
+/* =====================================================
+   SECTION 21 - RESPONSIVE DESIGN
+   EXPENSES
+   ===================================================== */
+
+
+@media (max-width: 900px) {
+
+    .expenses-main {
+
+        margin-left: 200px;
+
+        padding: 25px 20px;
+
+    }
+
+    .expense-cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .expenses-main {
+
+        margin-left: 70px;
+
+        padding: 20px 15px;
+
+    }
+
+    .expense-cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .expense-item {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}

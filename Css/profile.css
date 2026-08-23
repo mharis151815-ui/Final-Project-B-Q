@@ -525,3 +525,47 @@
 
 }
 
+
+
+/* =====================================================
+   SECTION 21 - RESPONSIVE DESIGN
+   PROFILE
+   ===================================================== */
+
+
+@media (max-width: 900px) {
+
+    .profile-main {
+
+        margin-left: 200px;
+
+        padding: 25px 20px;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .profile-main {
+
+        margin-left: 70px;
+
+        padding: 20px 15px;
+
+    }
+
+    .profile-card {
+
+        padding: 20px;
+
+    }
+
+    .profile-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}

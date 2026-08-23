@@ -414,3 +414,85 @@
     }
 
 }
+
+
+
+
+/* =====================================================
+   SECTION 21 - RESPONSIVE DESIGN
+   SMART TOOLS
+   ===================================================== */
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .tools-main {
+
+        margin-left: 200px;
+
+        padding: 25px 20px;
+
+    }
+
+    .tools-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    .tools-main {
+
+        margin-left: 70px;
+
+        padding: 20px 15px;
+
+    }
+
+    .tools-header h1 {
+
+        font-size: 26px;
+
+    }
+
+    .tools-header p {
+
+        font-size: 14px;
+
+    }
+
+    .tool-card {
+
+        padding: 16px;
+
+    }
+
+    .counter-result {
+
+        flex-direction: column;
+
+        gap: 5px;
+
+    }
+
+    .tool-buttons {
+
+        flex-direction: column;
+
+    }
+
+    .tool-buttons button {
+
+        width: 100%;
+
+    }
+
+}
