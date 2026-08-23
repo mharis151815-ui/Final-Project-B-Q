@@ -875,7 +875,7 @@ clearData.addEventListener("click", function() {
 
     if (confirmDelete) {
 
-        clearStudyHubData();
+        localStorage.clear();
 
         alert("All saved data has been cleared!");
 
