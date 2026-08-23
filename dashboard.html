@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | StudyHub</title>
+
+    <link rel="stylesheet"
+        href="Css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         DASHBOARD WRAPPER
+         ===================================================== -->
+
+    <div class="dashboard-wrapper">
+
+
+        <!-- =================================================
+             SIDEBAR
+             ================================================= -->
+
+        <aside class="sidebar">
+
+
+            <!-- Logo -->
+
+            <div class="sidebar-logo">
+
+                <a href="index.html">
+
+                    🎓
+                    <span>StudyHub</span>
+
+                </a>
+
+            </div>
+
+
+
+            <!-- Navigation -->
+
+            <nav class="sidebar-nav">
+
+
+                <p class="nav-title">
+                    MAIN MENU
+                </p>
+
+
+                <a href="dashboard.html"
+                    class="nav-link active">
+
+                    <span>📊</span>
+                    Dashboard
+
+                </a>
+
+
+                <a href="courses.html"
+                    class="nav-link">
+
+                    <span>📚</span>
+                    Courses
+
+                </a>
+
+
+                <a href="notes.html"
+                    class="nav-link">
+
+                    <span>📝</span>
+                    Notes
+
+                </a>
+
+
+                <a href="tasks.html"
+                    class="nav-link">
+
+                    <span>✅</span>
+                    Tasks
+
+                </a>
+
+
+                <p class="nav-title">
+                    TOOLS
+                </p>
+
+
+                <a href="quiz.html"
+                    class="nav-link">
+
+                    <span>🧠</span>
+                    Quiz
+
+                </a>
+
+
+                <a href="pomodoro.html"
+                    class="nav-link">
+
+                    <span>⏱️</span>
+                    Pomodoro
+
+                </a>
+
+
+                <a href="expenses.html"
+                    class="nav-link">
+
+                    <span>💰</span>
+                    Expenses
+
+                </a>
+
+
+                <a href="tools.html"
+                    class="nav-link">
+
+                    <span>🤖</span>
+                    AI Tools
+
+                </a>
+
+
+                <p class="nav-title">
+                    ACCOUNT
+                </p>
+
+
+                <a href="profile.html"
+                    class="nav-link">
+
+                    <span>👤</span>
+                    Profile
+
+                </a>
+
+
+                <a href="settings.html"
+                    class="nav-link">
+
+                    <span>⚙️</span>
+                    Settings
+
+                </a>
+
+
+            </nav>
+
+
+
+            <!-- Sidebar Bottom -->
+
+            <div class="sidebar-bottom">
+
+
+                <button
+                    id="logoutBtn"
+                    class="logout-btn">
+
+                    <span>🚪</span>
+
+                    Logout
+
+                </button>
+
+
+            </div>
+
+
+        </aside>
+
+
+
+        <!-- =================================================
+             MAIN CONTENT
+             ================================================= -->
+
+        <main class="main-content">
+
+
+            <!-- =============================================
+                 TOP BAR
+                 ============================================= -->
+
+            <header class="topbar">
+
+
+                <div class="mobile-menu">
+
+                    <button id="menuBtn">
+                        ☰
+                    </button>
+
+                </div>
+
+
+                <div class="topbar-title">
+
+                    <h1>
+                        Dashboard
+                    </h1>
+
+                    <p>
+                        Manage your learning journey.
+                    </p>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <div class="date-box">
+
+                        📅
+
+                        <span id="currentDate">
+                            Today
+                        </span>
+
+                    </div>
+
+
+                    <div class="user-mini">
+
+                        <div class="user-avatar"
+                            id="userAvatar">
+
+                            M
+
+                        </div>
+
+                        <div>
+
+                            <strong id="topUserName">
+                                Student
+                            </strong>
+
+                            <small>
+                                Student
+                            </small>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </header>
+
+
+
+            <!-- =============================================
+                 WELCOME SECTION
+                 ============================================= -->
+
+            <section class="welcome-section">
+
+
+                <div>
+
+                    <span class="welcome-badge">
+                        🎓 STUDYHUB DASHBOARD
+                    </span>
+
+
+                    <h2 id="welcomeMessage">
+                        Good Morning, Student 👋
+                    </h2>
+
+
+                    <p>
+                        Ready to learn something new today?
+                        Let's make today productive.
+                    </p>
+
+                </div>
+
+
+                <a href="courses.html"
+                    class="primary-btn">
+
+                    Start Learning →
+
+                </a>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 STAT CARDS
+                 ============================================= -->
+
+            <section class="stats-grid">
+
+
+                <!-- Courses -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        📚
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Total Courses
+                        </p>
+
+                        <h3>
+                            4
+                        </h3>
+
+                        <span class="stat-info">
+                            Courses available
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Tasks -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        ✅
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Tasks
+                        </p>
+
+                        <h3 id="taskCount">
+                            0/0
+                        </h3>
+
+                        <span class="stat-info">
+                            Completed today
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Quiz -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon orange">
+                        🧠
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Quiz Average
+                        </p>
+
+                        <h3>
+                            82%
+                        </h3>
+
+                        <span class="stat-info">
+                            Keep improving!
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Study Time -->
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        ⏱️
+                    </div>
+
+                    <div class="stat-content">
+
+                        <p>
+                            Study Time
+                        </p>
+
+                        <h3>
+                            2h 35m
+                        </h3>
+
+                        <span class="stat-info">
+                            Today's study time
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 DASHBOARD GRID
+                 ============================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- =========================================
+                     STUDY PROGRESS PREVIEW
+                     ========================================= -->
+
+                <div class="dashboard-card progress-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Learning Progress
+                            </h3>
+
+                            <p>
+                                Your current course progress
+                            </p>
+
+                        </div>
+
+
+                        <a href="courses.html">
+                            View Courses
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- HTML -->
+
+                    <div class="progress-item">
+
+                        <div class="progress-info">
+
+                            <span>
+                                HTML
+                            </span>
+
+                            <strong>
+                                100%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill html-progress"
+                                style="width: 100%;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CSS -->
+
+                    <div class="progress-item">
+
+                        <div class="progress-info">
+
+                            <span>
+                                CSS
+                            </span>
+
+                            <strong>
+                                80%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill css-progress"
+                                style="width: 80%;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- JavaScript -->
+
+                    <div class="progress-item">
+
+                        <div class="progress-info">
+
+                            <span>
+                                JavaScript
+                            </span>
+
+                            <strong>
+                                60%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill js-progress"
+                                style="width: 60%;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Git -->
+
+                    <div class="progress-item">
+
+                        <div class="progress-info">
+
+                            <span>
+                                Git & GitHub
+                            </span>
+
+                            <strong>
+                                40%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-bar">
+
+                            <div
+                                class="progress-fill git-progress"
+                                style="width: 40%;">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     TODAY'S GOAL
+                     ========================================= -->
+
+                <div class="dashboard-card goal-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Today's Goal
+                            </h3>
+
+                            <p>
+                                Keep up the good work!
+                            </p>
+
+                        </div>
+
+                        <span class="goal-icon">
+                            🎯
+                        </span>
+
+                    </div>
+
+
+                    <div class="goal-circle">
+
+                        <div>
+
+                            <strong>
+                                70%
+                            </strong>
+
+                            <span>
+                                Complete
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p class="goal-text">
+
+                        You're doing great!
+                        Complete your remaining tasks
+                        to reach today's goal.
+
+                    </p>
+
+
+                    <a href="tasks.html"
+                        class="secondary-btn">
+
+                        View Tasks
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 BOTTOM GRID
+                 ============================================= -->
+
+            <section class="bottom-grid">
+
+
+                <!-- =========================================
+                     TODAY'S TASKS
+                     ========================================= -->
+
+                <div class="dashboard-card tasks-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Today's Tasks
+                            </h3>
+
+                            <p>
+                                Stay organized and productive
+                            </p>
+
+                        </div>
+
+
+                        <a href="tasks.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div
+                        id="dashboardTasks"
+                        class="task-list">
+
+                        <!-- Tasks JavaScript se yahan aayengi -->
+
+                    </div>
+
+
+                    <a href="tasks.html"
+                        class="add-task-btn">
+
+                        + Add New Task
+
+                    </a>
+
+
+                </div>
+
+
+
+                <!-- =========================================
+                     RECENT NOTES
+                     ========================================= -->
+
+                <div class="dashboard-card notes-card">
+
+
+                    <div class="card-header">
+
+                        <div>
+
+                            <h3>
+                                Recent Notes
+                            </h3>
+
+                            <p>
+                                Your latest study notes
+                            </p>
+
+                        </div>
+
+
+                        <a href="notes.html">
+                            View All
+                        </a>
+
+                    </div>
+
+
+                    <div class="notes-list">
+
+
+                        <div class="note-item">
+
+                            <div class="note-icon">
+                                📝
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    JavaScript Functions
+                                </h4>
+
+                                <p>
+                                    Learn reusable blocks of code
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="note-item">
+
+                            <div class="note-icon">
+                                📄
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    HTML Forms
+                                </h4>
+
+                                <p>
+                                    Important form elements
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="note-item">
+
+                            <div class="note-icon">
+                                🎨
+                            </div>
+
+                            <div>
+
+                                <h4>
+                                    CSS Flexbox
+                                </h4>
+
+                                <p>
+                                    Flexbox layout basics
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+            </section>
+
+
+
+            <!-- =============================================
+                 QUICK ACTIONS
+                 ============================================= -->
+
+            <section class="dashboard-card quick-actions-card">
+
+
+                <div class="card-header">
+
+                    <div>
+
+                        <h3>
+                            Quick Actions
+                        </h3>
+
+                        <p>
+                            Quickly access your study tools
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-actions">
+
+
+                    <a href="courses.html"
+                        class="quick-action">
+
+                        <span>
+                            📚
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Browse Courses
+                            </strong>
+
+                            <small>
+                                Continue learning
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="notes.html"
+                        class="quick-action">
+
+                        <span>
+                            📝
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Create Note
+                            </strong>
+
+                            <small>
+                                Save your ideas
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="tasks.html"
+                        class="quick-action">
+
+                        <span>
+                            ✅
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Add Task
+                            </strong>
+
+                            <small>
+                                Plan your day
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <a href="tools.html"
+                        class="quick-action">
+
+                        <span>
+                            🤖
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                AI Tools
+                            </strong>
+
+                            <small>
+                                Explore smart tools
+                            </small>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+
+            </section>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

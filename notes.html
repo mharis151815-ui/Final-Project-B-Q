@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Notes | StudyHub</title>
+
+    <link rel="stylesheet" href="Css/dashboard.css">
+
+    <link rel="stylesheet" href="Css/notes.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🎓 StudyHub
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html" class="nav-link">
+
+                📊
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="courses.html" class="nav-link">
+
+                📚
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="notes.html" class="nav-link active">
+
+                📝
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="tasks.html" class="nav-link">
+
+                ✅
+                <span>Tasks</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                TOOLS
+            </div>
+
+
+            <!-- Haris -->
+
+            <a href="quiz.html" class="nav-link">
+
+                🧠
+                <span>Quiz</span>
+
+            </a>
+
+
+            <!-- Haris -->
+
+            <a href="pomodoro.html" class="nav-link">
+
+                ⏱️
+                <span>Pomodoro</span>
+
+            </a>
+
+
+            <a href="expenses.html" class="nav-link">
+
+                💰
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a href="tools.html" class="nav-link">
+
+                🤖
+                <span>AI Tools</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                ACCOUNT
+            </div>
+
+
+            <a href="profile.html" class="nav-link">
+
+                👤
+                <span>Profile</span>
+
+            </a>
+
+
+            <!-- Haris -->
+
+            <a href="settings.html" class="nav-link">
+
+                ⚙️
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="notes-main">
+
+
+        <!-- Page Header -->
+
+        <div class="notes-header">
+
+            <div>
+
+                <span class="page-badge">
+                    📝 STUDY NOTES
+                </span>
+
+                <h1>
+                    My Notes
+                </h1>
+
+                <p>
+                    Create and organize your study notes.
+                </p>
+
+            </div>
+
+
+            <button id="addNoteBtn" class="add-note-btn">
+
+                + Add New Note
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             SEARCH
+             ================================================= -->
+
+        <div class="notes-tools">
+
+            <div class="notes-search">
+
+                🔍
+
+                <input type="text" id="searchNote" placeholder="Search your notes...">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NOTE FORM
+             ================================================= -->
+
+        <div id="noteFormBox" class="note-form-box">
+
+
+            <h2 id="formTitle">
+                Add New Note
+            </h2>
+
+
+            <form id="noteForm">
+
+
+                <!-- Title -->
+
+                <div class="form-group">
+
+                    <label for="noteTitle">
+                        Note Title
+                    </label>
+
+                    <input type="text" id="noteTitle" placeholder="Enter note title" required>
+
+                </div>
+
+
+                <!-- Category -->
+
+                <div class="form-group">
+
+                    <label for="noteCategory">
+                        Category
+                    </label>
+
+                    <select id="noteCategory">
+
+                        <option value="HTML">
+                            HTML
+                        </option>
+
+                        <option value="CSS">
+                            CSS
+                        </option>
+
+                        <option value="JavaScript">
+                            JavaScript
+                        </option>
+
+                        <option value="Git">
+                            Git & GitHub
+                        </option>
+
+                        <option value="Other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Content -->
+
+                <div class="form-group">
+
+                    <label for="noteContent">
+                        Note
+                    </label>
+
+                    <textarea id="noteContent" rows="6" placeholder="Write your note here..." required></textarea>
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="form-buttons">
+
+                    <button type="submit" class="save-note-btn">
+
+                        Save Note
+
+                    </button>
+
+
+                    <button type="button" id="cancelNoteBtn" class="cancel-note-btn">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             NOTES
+             ================================================= -->
+
+        <section class="notes-section">
+
+
+            <div class="notes-section-heading">
+
+                <h2>
+                    All Notes
+                </h2>
+
+                <span id="notesCount">
+                    0 Notes
+                </span>
+
+            </div>
+
+
+            <div id="notesContainer" class="notes-container">
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="js/storage.js"></script>
+    <script src="js/notes.js"></script>
+
+</body>
+
+</html>

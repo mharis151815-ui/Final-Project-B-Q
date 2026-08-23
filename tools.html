@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>AI Tools | StudyHub</title>
+
+    <link rel="stylesheet"
+        href="Css/dashboard.css">
+
+    <link rel="stylesheet"
+        href="Css/tools.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+
+        <div class="sidebar-logo">
+
+            🎓 StudyHub
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html"
+                class="nav-link">
+
+                📊
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="courses.html"
+                class="nav-link">
+
+                📚
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="notes.html"
+                class="nav-link">
+
+                📝
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="tasks.html"
+                class="nav-link">
+
+                ✅
+                <span>Tasks</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                TOOLS
+            </div>
+
+
+            <!-- HARIS - SECTION 8 -->
+
+            <a href="quiz.html"
+                class="nav-link">
+
+                🧠
+                <span>Quiz</span>
+
+            </a>
+
+
+            <!-- HARIS - SECTION 9 -->
+
+            <a href="pomodoro.html"
+                class="nav-link">
+
+                ⏱️
+                <span>Pomodoro</span>
+
+            </a>
+
+
+            <!-- SECTION 10 -->
+
+            <a href="expenses.html"
+                class="nav-link">
+
+                💰
+                <span>Expenses</span>
+
+            </a>
+
+
+            <!-- HARIS - SECTION 11 -->
+
+            <a href="progress.html"
+                class="nav-link">
+
+                📈
+                <span>Progress</span>
+
+            </a>
+
+
+            <!-- SECTION 12 -->
+
+            <a href="tools.html"
+                class="nav-link active">
+
+                🤖
+                <span>AI Tools</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                ACCOUNT
+            </div>
+
+
+            <a href="profile.html"
+                class="nav-link">
+
+                👤
+                <span>Profile</span>
+
+            </a>
+
+
+            <!-- HARIS - SECTION 15 -->
+
+            <a href="settings.html"
+                class="nav-link">
+
+                ⚙️
+                <span>Settings</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- =================================================
+             LOGOUT
+             ================================================= -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                🚪
+
+                <span>
+                    Logout
+                </span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="tools-main">
+
+
+        <!-- =================================================
+             HEADER
+             ================================================= -->
+
+        <header class="tools-header">
+
+            <span class="tools-badge">
+
+                🤖 SMART TOOLS
+
+            </span>
+
+
+            <h1>
+
+                AI & Smart Tools
+
+            </h1>
+
+
+            <p>
+
+                Useful tools to help you study,
+                write and work smarter.
+
+            </p>
+
+        </header>
+
+
+
+        <!-- =================================================
+             TOOLS GRID
+             ================================================= -->
+
+        <section class="tools-grid">
+
+
+            <!-- =================================================
+                 1. WORD COUNTER
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    📝
+                </div>
+
+
+                <h2>
+                    Word Counter
+                </h2>
+
+
+                <p>
+                    Count words and characters in your text.
+                </p>
+
+
+                <textarea
+                    id="wordText"
+                    placeholder="Write or paste your text here...">
+                </textarea>
+
+
+                <div class="counter-result">
+
+                    <span>
+                        Words:
+                        <strong id="wordCount">
+                            0
+                        </strong>
+                    </span>
+
+
+                    <span>
+                        Characters:
+                        <strong id="characterCount">
+                            0
+                        </strong>
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 2. TEXT FORMATTER
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    ✍️
+                </div>
+
+
+                <h2>
+                    Text Formatter
+                </h2>
+
+
+                <p>
+                    Change your text to uppercase or lowercase.
+                </p>
+
+
+                <textarea
+                    id="formatText"
+                    placeholder="Write your text here...">
+                </textarea>
+
+
+                <div class="tool-buttons">
+
+
+                    <button
+                        id="upperBtn">
+
+                        UPPERCASE
+
+                    </button>
+
+
+                    <button
+                        id="lowerBtn">
+
+                        lowercase
+
+                    </button>
+
+
+                    <button
+                        id="clearTextBtn">
+
+                        Clear
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 3. CALCULATOR
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    🧮
+                </div>
+
+
+                <h2>
+                    Calculator
+                </h2>
+
+
+                <p>
+                    Perform basic mathematical calculations.
+                </p>
+
+
+                <input
+                    type="text"
+                    id="calculatorInput"
+                    placeholder="Example: 20 + 10">
+
+
+                <button
+                    id="calculateBtn"
+                    class="main-tool-btn">
+
+                    Calculate
+
+                </button>
+
+
+                <div
+                    id="calculatorResult"
+                    class="tool-result">
+
+                    Result will appear here.
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 4. PASSWORD GENERATOR
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    🔐
+                </div>
+
+
+                <h2>
+                    Password Generator
+                </h2>
+
+
+                <p>
+                    Generate a random secure password.
+                </p>
+
+
+                <input
+                    type="text"
+                    id="passwordResult"
+                    placeholder="Your password"
+                    readonly>
+
+
+                <button
+                    id="generatePasswordBtn"
+                    class="main-tool-btn">
+
+                    Generate Password
+
+                </button>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 5. COLOR PICKER
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    🎨
+                </div>
+
+
+                <h2>
+                    Color Picker
+                </h2>
+
+
+                <p>
+                    Choose a color and get its color code.
+                </p>
+
+
+                <input
+                    type="color"
+                    id="colorPicker"
+                    value="#4f46e5">
+
+
+                <div
+                    id="colorCode"
+                    class="color-code">
+
+                    #4f46e5
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 6. AGE CALCULATOR
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    📅
+                </div>
+
+
+                <h2>
+                    Age Calculator
+                </h2>
+
+
+                <p>
+                    Calculate your age from your date of birth.
+                </p>
+
+
+                <input
+                    type="date"
+                    id="birthDate">
+
+
+                <button
+                    id="calculateAgeBtn"
+                    class="main-tool-btn">
+
+                    Calculate Age
+
+                </button>
+
+
+                <div
+                    id="ageResult"
+                    class="tool-result">
+
+                    Your age will appear here.
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- =================================================
+                 7. QR GENERATOR
+                 ================================================= -->
+
+            <div class="tool-card">
+
+
+                <div class="tool-icon">
+                    🔗
+                </div>
+
+
+                <h2>
+                    QR Generator
+                </h2>
+
+
+                <p>
+                    Generate a QR code from any text or link.
+                </p>
+
+
+                <input
+                    type="text"
+                    id="qrText"
+                    placeholder="Enter text or URL">
+
+
+                <button
+                    id="generateQRBtn"
+                    class="main-tool-btn">
+
+                    Generate QR
+
+                </button>
+
+
+                <div
+                    id="qrCode"
+                    class="qr-code">
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/tools.js"></script>
+
+</body>
+
+</html>

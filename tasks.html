@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tasks | StudyHub</title>
+
+    <link rel="stylesheet" href="Css/dashboard.css">
+
+    <link rel="stylesheet" href="Css/tasks.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            🎓 StudyHub
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html" class="nav-link">
+
+                📊
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="courses.html" class="nav-link">
+
+                📚
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="notes.html" class="nav-link">
+
+                📝
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="tasks.html" class="nav-link active">
+
+                ✅
+                <span>Tasks</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                TOOLS
+            </div>
+
+
+            <!-- HARIS -->
+
+            <a href="quiz.html" class="nav-link">
+
+                🧠
+                <span>Quiz</span>
+
+            </a>
+
+
+            <!-- HARIS -->
+
+            <a href="pomodoro.html" class="nav-link">
+
+                ⏱️
+                <span>Pomodoro</span>
+
+            </a>
+
+
+            <!-- SECTION 10 -->
+
+            <a href="expenses.html" class="nav-link">
+
+                💰
+                <span>Expenses</span>
+
+            </a>
+
+
+            <!-- SECTION 12 -->
+
+            <a href="tools.html" class="nav-link">
+
+                🤖
+                <span>AI Tools</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                ACCOUNT
+            </div>
+
+
+            <a href="profile.html" class="nav-link">
+
+                👤
+                <span>Profile</span>
+
+            </a>
+
+
+            <!-- HARIS -->
+
+            <a href="settings.html" class="nav-link">
+
+                ⚙️
+                <span>Settings</span>
+
+            </a>
+
+        </nav>
+
+
+        <!-- LOGOUT -->
+
+        <div class="sidebar-bottom">
+
+            <button id="logoutBtn" class="logout-btn">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="tasks-main">
+
+
+        <!-- =================================================
+             PAGE HEADER
+             ================================================= -->
+
+        <div class="tasks-header">
+
+            <div>
+
+                <span class="page-badge">
+                    ✅ TASK MANAGER
+                </span>
+
+                <h1>
+                    My Tasks
+                </h1>
+
+                <p>
+                    Organize your daily study tasks.
+                </p>
+
+            </div>
+
+
+            <button id="addTaskBtn" class="add-task-btn">
+
+                + Add New Task
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TASK STATS
+             ================================================= -->
+
+        <div class="task-stats">
+
+
+            <div class="task-stat-card">
+
+                <div class="stat-icon">
+                    📋
+                </div>
+
+                <div>
+
+                    <span>
+                        Total Tasks
+                    </span>
+
+                    <h3 id="totalTasks">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-stat-card">
+
+                <div class="stat-icon">
+                    ⏳
+                </div>
+
+                <div>
+
+                    <span>
+                        Pending
+                    </span>
+
+                    <h3 id="pendingTasks">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <div class="task-stat-card">
+
+                <div class="stat-icon">
+                    ✅
+                </div>
+
+                <div>
+
+                    <span>
+                        Completed
+                    </span>
+
+                    <h3 id="completedTasks">
+                        0
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             SEARCH + FILTER
+             ================================================= -->
+
+        <div class="task-tools">
+
+
+            <div class="task-search">
+
+                🔍
+
+                <input type="text" id="searchTask" placeholder="Search tasks...">
+
+            </div>
+
+
+            <div class="task-filters">
+
+                <button class="filter-btn active" data-filter="all">
+
+                    All
+
+                </button>
+
+
+                <button class="filter-btn" data-filter="pending">
+
+                    Pending
+
+                </button>
+
+
+                <button class="filter-btn" data-filter="completed">
+
+                    Completed
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TASK FORM
+             ================================================= -->
+
+        <div id="taskFormBox" class="task-form-box">
+
+
+            <h2 id="taskFormTitle">
+                Add New Task
+            </h2>
+
+
+            <form id="taskForm">
+
+
+                <!-- Task -->
+
+                <div class="form-group">
+
+                    <label for="taskTitle">
+                        Task
+                    </label>
+
+                    <input type="text" id="taskTitle" placeholder="Enter your task" required>
+
+                </div>
+
+
+                <!-- Priority -->
+
+                <div class="form-group">
+
+                    <label for="taskPriority">
+                        Priority
+                    </label>
+
+                    <select id="taskPriority">
+
+                        <option value="Low">
+                            Low
+                        </option>
+
+                        <option value="Medium">
+                            Medium
+                        </option>
+
+                        <option value="High">
+                            High
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Due Date -->
+
+                <div class="form-group">
+
+                    <label for="taskDate">
+                        Due Date
+                    </label>
+
+                    <input type="date" id="taskDate">
+
+                </div>
+
+
+                <!-- Buttons -->
+
+                <div class="form-buttons">
+
+                    <button type="submit" class="save-task-btn">
+
+                        Save Task
+
+                    </button>
+
+
+                    <button type="button" id="cancelTaskBtn" class="cancel-task-btn">
+
+                        Cancel
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- =================================================
+             TASK LIST
+             ================================================= -->
+
+        <section class="tasks-section">
+
+
+            <div class="tasks-section-heading">
+
+                <h2>
+                    Today's Tasks
+                </h2>
+
+                <span id="taskCount">
+                    0 Tasks
+                </span>
+
+            </div>
+
+
+            <div id="tasksContainer" class="tasks-container">
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <script src="js/storage.js"></script>
+    <script src="js/tasks.js"></script>
+
+</body>
+
+</html>

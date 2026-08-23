@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Courses | StudyHub</title>
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet"
+        href="Css/dashboard.css">
+
+    <!-- Courses CSS -->
+    <link rel="stylesheet"
+        href="Css/courses.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+            🎓 StudyHub
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <nav class="sidebar-nav">
+
+
+            <div class="nav-title">
+                MAIN MENU
+            </div>
+
+
+            <a href="dashboard.html"
+                class="nav-link">
+
+                📊
+                <span>Dashboard</span>
+
+            </a>
+
+
+            <a href="courses.html"
+                class="nav-link active">
+
+                📚
+                <span>Courses</span>
+
+            </a>
+
+
+            <a href="notes.html"
+                class="nav-link">
+
+                📝
+                <span>Notes</span>
+
+            </a>
+
+
+            <a href="tasks.html"
+                class="nav-link">
+
+                ✅
+                <span>Tasks</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                TOOLS
+            </div>
+
+
+            <!-- Haris ka section -->
+
+            <a href="quiz.html"
+                class="nav-link">
+
+                🧠
+                <span>Quiz</span>
+
+            </a>
+
+
+            <!-- Haris ka section -->
+
+            <a href="pomodoro.html"
+                class="nav-link">
+
+                ⏱️
+                <span>Pomodoro</span>
+
+            </a>
+
+
+            <a href="expenses.html"
+                class="nav-link">
+
+                💰
+                <span>Expenses</span>
+
+            </a>
+
+
+            <a href="tools.html"
+                class="nav-link">
+
+                🤖
+                <span>AI Tools</span>
+
+            </a>
+
+
+            <div class="nav-title">
+                ACCOUNT
+            </div>
+
+
+            <a href="profile.html"
+                class="nav-link">
+
+                👤
+                <span>Profile</span>
+
+            </a>
+
+
+            <!-- Haris ka section -->
+
+            <a href="settings.html"
+                class="nav-link">
+
+                ⚙️
+                <span>Settings</span>
+
+            </a>
+
+
+        </nav>
+
+
+        <!-- Logout -->
+
+        <div class="sidebar-bottom">
+
+            <button
+                id="logoutBtn"
+                class="logout-btn">
+
+                🚪
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+
+    </aside>
+
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+         ===================================================== -->
+
+    <main class="courses-main">
+
+
+        <!-- Page Header -->
+
+        <section class="courses-header">
+
+            <div>
+
+                <span class="courses-badge">
+                    📚 LEARNING
+                </span>
+
+                <h1>
+                    My Courses
+                </h1>
+
+                <p>
+                    Learn new skills and improve your
+                    web development knowledge.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             COURSE CARDS
+             ================================================= -->
+
+        <section class="courses-section">
+
+
+            <div class="courses-grid">
+
+
+                <!-- =========================================
+                     HTML COURSE
+                     ========================================= -->
+
+                <article class="course-card">
+
+                    <div class="course-icon html-icon">
+                        🌐
+                    </div>
+
+
+                    <div class="course-content">
+
+                        <span class="course-category">
+                            Frontend
+                        </span>
+
+
+                        <h2>
+                            HTML
+                        </h2>
+
+
+                        <p>
+                            Learn the structure of websites
+                            using HTML.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📚 10 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 4 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="progress-top">
+
+                                <span>
+                                    Progress
+                                </span>
+
+                                <span>
+                                    100%
+                                </span>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 100%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="continue-btn"
+                            data-course="html">
+
+                            Continue Learning →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================================
+                     CSS COURSE
+                     ========================================= -->
+
+                <article class="course-card">
+
+                    <div class="course-icon css-icon">
+                        🎨
+                    </div>
+
+
+                    <div class="course-content">
+
+                        <span class="course-category">
+                            Frontend
+                        </span>
+
+
+                        <h2>
+                            CSS
+                        </h2>
+
+
+                        <p>
+                            Create beautiful and responsive
+                            website designs.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📚 12 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 5 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="progress-top">
+
+                                <span>
+                                    Progress
+                                </span>
+
+                                <span>
+                                    80%
+                                </span>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 80%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="continue-btn"
+                            data-course="css">
+
+                            Continue Learning →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================================
+                     JAVASCRIPT COURSE
+                     ========================================= -->
+
+                <article class="course-card">
+
+                    <div class="course-icon js-icon">
+                        ⚡
+                    </div>
+
+
+                    <div class="course-content">
+
+                        <span class="course-category">
+                            Programming
+                        </span>
+
+
+                        <h2>
+                            JavaScript
+                        </h2>
+
+
+                        <p>
+                            Learn JavaScript and make websites
+                            interactive.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📚 15 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 8 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="progress-top">
+
+                                <span>
+                                    Progress
+                                </span>
+
+                                <span>
+                                    60%
+                                </span>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 60%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="continue-btn"
+                            data-course="javascript">
+
+                            Continue Learning →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================================
+                     GIT COURSE
+                     ========================================= -->
+
+                <article class="course-card">
+
+                    <div class="course-icon git-icon">
+                        🔀
+                    </div>
+
+
+                    <div class="course-content">
+
+                        <span class="course-category">
+                            Development Tools
+                        </span>
+
+
+                        <h2>
+                            Git & GitHub
+                        </h2>
+
+
+                        <p>
+                            Learn version control and manage
+                            your projects with GitHub.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📚 8 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 3 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="progress-top">
+
+                                <span>
+                                    Progress
+                                </span>
+
+                                <span>
+                                    40%
+                                </span>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 40%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="continue-btn"
+                            data-course="git">
+
+                            Continue Learning →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =========================================
+                     WEB DEVELOPMENT COURSE
+                     ========================================= -->
+
+                <article class="course-card">
+
+                    <div class="course-icon web-icon">
+                        💻
+                    </div>
+
+
+                    <div class="course-content">
+
+                        <span class="course-category">
+                            Career
+                        </span>
+
+
+                        <h2>
+                            Web Development
+                        </h2>
+
+
+                        <p>
+                            Learn how HTML, CSS and JavaScript
+                            work together.
+                        </p>
+
+
+                        <div class="course-info">
+
+                            <span>
+                                📚 20 Lessons
+                            </span>
+
+                            <span>
+                                ⏱️ 12 Hours
+                            </span>
+
+                        </div>
+
+
+                        <div class="course-progress">
+
+                            <div class="progress-top">
+
+                                <span>
+                                    Progress
+                                </span>
+
+                                <span>
+                                    30%
+                                </span>
+
+                            </div>
+
+
+                            <div class="progress-bar">
+
+                                <div
+                                    class="progress-fill"
+                                    style="width: 30%;">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="continue-btn"
+                            data-course="web-development">
+
+                            Continue Learning →
+
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="js/courses.js"></script>
+
+</body>
+
+</html>

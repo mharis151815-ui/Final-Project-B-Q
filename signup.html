@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up | StudyHub</title>
+
+    <link rel="stylesheet"
+        href="Css/auth.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         SIGNUP PAGE
+         ===================================================== -->
+
+    <main class="auth-page">
+
+
+        <!-- Left Side -->
+
+        <section class="auth-info">
+
+            <a href="index.html"
+                class="auth-logo">
+
+                🎓 StudyHub
+
+            </a>
+
+
+            <div class="auth-info-content">
+
+                <span class="auth-badge">
+                    ✨ START YOUR JOURNEY
+                </span>
+
+                <h1>
+                    Learn Smarter.
+                    <span>Achieve More.</span>
+                </h1>
+
+                <p>
+                    Create your StudyHub account and
+                    manage your learning journey in one place.
+                </p>
+
+
+                <div class="auth-features">
+
+                    <div>
+                        <span>✓</span>
+                        Organize your courses
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Create personal notes
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Manage your daily tasks
+                    </div>
+
+                    <div>
+                        <span>✓</span>
+                        Track your learning
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- Right Side -->
+
+        <section class="auth-form-section">
+
+            <div class="auth-card signup-card">
+
+
+                <div class="auth-heading">
+
+                    <h2>
+                        Create Account 🚀
+                    </h2>
+
+                    <p>
+                        Start your StudyHub journey today.
+                    </p>
+
+                </div>
+
+
+                <!-- Error Message -->
+
+                <div
+                    id="signupError"
+                    class="auth-message error-message">
+
+                </div>
+
+
+                <!-- Signup Form -->
+
+                <form id="signupForm">
+
+
+                    <!-- Name -->
+
+                    <div class="form-group">
+
+                        <label for="signupName">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="signupName"
+                            placeholder="Enter your full name"
+                            autocomplete="name"
+                            required>
+
+                    </div>
+
+
+
+                    <!-- Email -->
+
+                    <div class="form-group">
+
+                        <label for="signupEmail">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+<!-- Password -->
+
+<div class="form-group">
+
+    <label for="signupPassword">
+        Password
+    </label>
+
+    <div class="password-wrapper">
+
+        <input
+            type="password"
+            id="signupPassword"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            required
+        >
+
+        <button
+            type="button"
+            class="password-toggle"
+            id="signupPasswordToggle">
+
+            <span class="eye-icon"></span>
+
+        </button>
+
+    </div>
+
+</div>
+
+                    <!-- Confirm Password -->
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+
+                        <div class="password-wrapper">
+
+                            <input
+                                type="password"
+                                id="confirmPassword"
+                                placeholder="Confirm your password"
+                                autocomplete="new-password"
+                                required>
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                id="confirmPasswordToggle">
+
+                                <span class="eye-icon"></span>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Terms -->
+
+                    <div class="terms-row">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="terms"
+                                required>
+
+                            I agree to the
+                            <a href="#">
+                                Terms & Conditions
+                            </a>
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Signup Button -->
+
+                    <button
+                        type="submit"
+                        class="auth-submit-btn">
+
+                        Create My Account →
+
+                    </button>
+
+
+                </form>
+
+
+
+                <!-- Login Link -->
+
+                <p class="auth-switch">
+
+                    Already have an account?
+
+                    <a href="login.html">
+                        Login
+                    </a>
+
+                </p>
+
+
+
+                <!-- Back Home -->
+
+                <a
+                    href="index.html"
+                    class="back-home">
+
+                    ← Back to Home
+
+                </a>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>
