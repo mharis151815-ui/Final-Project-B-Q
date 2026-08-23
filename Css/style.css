@@ -1015,3 +1015,60 @@ button {
 .timer-modes button:hover {
     opacity: 0.8;
 }
+
+.progress-section {
+    width: 80%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.progress-section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.progress-item {
+    margin-bottom: 25px;
+}
+
+.progress-title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+}
+
+#html-progress {
+    width: 100%;
+}
+
+#css-progress {
+    width: 80%;
+}
+
+#javascript-progress {
+    width: 60%;
+}
+
+#git-progress {
+    width: 40%;
+}

@@ -759,9 +759,20 @@ showTime();
    11. STUDY PROGRESS - HARIS
    ===================================================== */
 
+let htmlProgress = 100;
+let cssProgress = 80;
+let javascriptProgress = 60;
+let gitProgress = 40;
 
-/* HARIS WILL ADD CODE HERE */
+document.getElementById("html-progress").style.width = htmlProgress + "%";
+document.getElementById("css-progress").style.width = cssProgress + "%";
+document.getElementById("javascript-progress").style.width = javascriptProgress + "%";
+document.getElementById("git-progress").style.width = gitProgress + "%";
 
+document.getElementById("html-percent").innerText = htmlProgress + "%";
+document.getElementById("css-percent").innerText = cssProgress + "%";
+document.getElementById("javascript-percent").innerText = javascriptProgress + "%";
+document.getElementById("git-percent").innerText = gitProgress + "%";
 
 /* =====================================================
    12. AI / SMART TOOLS
