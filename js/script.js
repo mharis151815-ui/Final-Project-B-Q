@@ -629,9 +629,123 @@ showQuestion();
    9. POMODORO TIMER - HARIS
    ===================================================== */
 
+let minutes = 25;
+let seconds = 0;
+let timer;
 
-/* HARIS WILL ADD CODE HERE */
+let minutesDisplay = document.getElementById("minutes");
+let secondsDisplay = document.getElementById("seconds");
+let mode = document.getElementById("mode");
 
+let startButton = document.getElementById("start");
+let pauseButton = document.getElementById("pause");
+let resetButton = document.getElementById("reset");
+
+let focusButton = document.getElementById("focus");
+let shortBreakButton = document.getElementById("short-break");
+let longBreakButton = document.getElementById("long-break");
+
+
+function showTime() {
+    minutesDisplay.innerText = minutes;
+    secondsDisplay.innerText = seconds < 10 ? "0" + seconds : seconds;
+}
+
+
+function startTimer() {
+
+    if (timer) {
+        return;
+    }
+
+    timer = setInterval(function () {
+
+        if (seconds === 0) {
+
+            if (minutes === 0) {
+                clearInterval(timer);
+                timer = null;
+                alert("Time is over!");
+                return;
+            }
+
+            minutes--;
+            seconds = 59;
+
+        } else {
+            seconds--;
+        }
+
+        showTime();
+
+    }, 1000);
+}
+
+
+function pauseTimer() {
+    clearInterval(timer);
+    timer = null;
+}
+
+
+function resetTimer() {
+    pauseTimer();
+
+    minutes = 25;
+    seconds = 0;
+    mode.innerText = "Focus Session";
+
+    showTime();
+}
+
+
+function setFocus() {
+    pauseTimer();
+
+    minutes = 25;
+    seconds = 0;
+    mode.innerText = "Focus Session";
+
+    showTime();
+}
+
+
+function setShortBreak() {
+    pauseTimer();
+
+    minutes = 5;
+    seconds = 0;
+    mode.innerText = "Short Break";
+
+    showTime();
+}
+
+
+function setLongBreak() {
+    pauseTimer();
+
+    minutes = 15;
+    seconds = 0;
+    mode.innerText = "Long Break";
+
+    showTime();
+}
+
+
+startButton.addEventListener("click", startTimer);
+
+pauseButton.addEventListener("click", pauseTimer);
+
+resetButton.addEventListener("click", resetTimer);
+
+focusButton.addEventListener("click", setFocus);
+
+shortBreakButton.addEventListener("click", setShortBreak);
+
+longBreakButton.addEventListener("click", setLongBreak);
+
+
+showTime();
 
 /* =====================================================
    10. EXPENSE TRACKER
