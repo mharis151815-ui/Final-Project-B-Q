@@ -786,9 +786,28 @@ document.getElementById("git-percent").innerText = gitProgress + "%";
    13. SEARCH - HARIS
    ===================================================== */
 
+let searchInput = document.getElementById("search-input");
+let searchButton = document.getElementById("search-button");
+let searchItems = document.querySelectorAll(".search-item");
 
-/* HARIS WILL ADD CODE HERE */
+function searchItemsList() {
 
+    let searchText = searchInput.value.toLowerCase();
+
+    searchItems.forEach(function(item) {
+
+        let text = item.innerText.toLowerCase();
+
+        if (text.includes(searchText)) {
+            item.style.display = "block";
+        } else {
+            item.style.display = "none";
+        }
+
+    });
+}
+
+searchButton.addEventListener("click", searchItemsList);
 
 /* =====================================================
    14. FAVORITES / BOOKMARKS - HARIS
