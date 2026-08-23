@@ -813,9 +813,17 @@ searchButton.addEventListener("click", searchItemsList);
    14. FAVORITES / BOOKMARKS - HARIS
    ===================================================== */
 
+let removeButtons = document.querySelectorAll(".remove-favorite");
 
-/* HARIS WILL ADD CODE HERE */
+removeButtons.forEach(function(button) {
 
+    button.addEventListener("click", function() {
+
+        button.parentElement.remove();
+
+    });
+
+});
 
 /* =====================================================
    15. DARK / LIGHT MODE - HARIS
