@@ -829,9 +829,7 @@ removeButtons.forEach(function(button) {
    15. DARK / LIGHT MODE - HARIS
    ===================================================== */
 
-
-/* HARIS WILL ADD CODE HERE */
-
+   /* HARIS WILL ADD CODE HERE */
 
 /* =====================================================
    16. NOTIFICATIONS / TOASTS - HARIS
@@ -853,9 +851,52 @@ removeButtons.forEach(function(button) {
    18. SETTINGS - HARIS
    ===================================================== */
 
+let profileButton = document.getElementById("profile-button");
+let clearData = document.getElementById("clear-data");
+let logoutButton = document.getElementById("logout");
 
-/* HARIS WILL ADD CODE HERE */
 
+profileButton.addEventListener("click", function() {
+
+    let name = prompt("Enter your name:");
+
+    if (name) {
+        alert("Profile updated successfully!");
+    }
+
+});
+
+
+clearData.addEventListener("click", function() {
+
+    let confirmDelete = confirm(
+        "Are you sure you want to clear your saved data?"
+    );
+
+    if (confirmDelete) {
+
+        localStorage.clear();
+
+        alert("All saved data has been cleared!");
+
+    }
+
+});
+
+
+logoutButton.addEventListener("click", function() {
+
+    let confirmLogout = confirm(
+        "Are you sure you want to logout?"
+    );
+
+    if (confirmLogout) {
+
+        alert("You have been logged out!");
+
+    }
+
+});
 
 /* =====================================================
    19. LOCALSTORAGE
